@@ -114,19 +114,16 @@ widgets:
   # =========================
 
   touhou_icons:
-    type: "yasb.applications.ApplicationsWidget"
+    type: "yasb.custom.CustomWidget"
     options:
-      label: ""
       class_name: "touhou-widget"
-      image_icon_size: 17
+      label: "<img src='C:/Users/User/remilia/assets/yasb/touhou/reimu.png' width='17' height='17'> <img src='C:/Users/User/remilia/assets/yasb/touhou/marisa.png' width='17' height='17'> <img src='C:/Users/User/remilia/assets/yasb/touhou/cirno.png' width='17' height='17'> <img src='C:/Users/User/remilia/assets/yasb/touhou/sakuya.png' width='17' height='17'> <img src='C:/Users/User/remilia/assets/yasb/touhou/remilia.png' width='17' height='17'>"
+      label_alt: "Reimu  Marisa  Cirno  Sakuya  Remilia"
       tooltip: true
-
-      app_list:
-        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\reimu.png", launch: "cmd.exe /c exit", name: "Reimu Hakurei" }
-        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\marisa.png", launch: "cmd.exe /c exit", name: "Marisa Kirisame" }
-        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\cirno.png", launch: "cmd.exe /c exit", name: "Cirno" }
-        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\sakuya.png", launch: "cmd.exe /c exit", name: "Sakuya Izayoi" }
-        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\remilia.png", launch: "cmd.exe /c exit", name: "Remilia Scarlet" }
+      callbacks:
+        on_left: "do_nothing"
+        on_middle: "do_nothing"
+        on_right: "do_nothing"
 
 
   # =========================
