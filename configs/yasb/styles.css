@@ -75,35 +75,34 @@
     padding: 6px;
 }
 
-.touhou-widget {
+.remilia-ornaments {
     margin-left: 2px;
     margin-right: 6px;
     background-color: transparent;
 }
 
-.touhou-widget .widget-container {
+.remilia-ornaments .widget-container {
     background-color: transparent;
     border: 0;
     padding: 0;
     margin: 0;
-    spacing: 0;
+    spacing: 1px;
 }
 
-.touhou-widget .widget-container .label {
+.remilia-ornaments .widget-container .label {
     background-color: transparent;
     border: 0;
     padding: 1px;
     margin: 0 1px;
-    min-width: 20px;
-    min-height: 20px;
+    min-width: 18px;
+    min-height: 18px;
 }
 
-.touhou-widget .widget-container .label:hover {
+.remilia-ornaments .widget-container .label:hover {
     background-color: var(--bg3);
     border: 1px solid var(--border2);
     border-radius: 5px;
 }
-
 
 .glazewm-tiling-direction {
     background-color: transparent;
