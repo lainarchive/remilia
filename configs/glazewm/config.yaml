@@ -55,8 +55,8 @@ window_effects:
       style: "square"
 
     transparency:
-      enabled: false
-      opacity: "100%"
+      enabled: true
+      opacity: "92%"
 
 
 window_behavior:
