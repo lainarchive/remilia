@@ -117,8 +117,8 @@ widgets:
     type: "yasb.custom.CustomWidget"
     options:
       class_name: "touhou-widget"
-      label: "<img src='C:/Users/User/remilia/assets/yasb/touhou/reimu.png' width='17' height='17'> <img src='C:/Users/User/remilia/assets/yasb/touhou/marisa.png' width='17' height='17'> <img src='C:/Users/User/remilia/assets/yasb/touhou/cirno.png' width='17' height='17'> <img src='C:/Users/User/remilia/assets/yasb/touhou/sakuya.png' width='17' height='17'> <img src='C:/Users/User/remilia/assets/yasb/touhou/remilia.png' width='17' height='17'>"
-      label_alt: "Reimu  Marisa  Cirno  Sakuya  Remilia"
+      label: "<img src='file:///C:/Users/User/remilia/assets/yasb/touhou/touhou_rail.svg' width='116' height='22'>"
+      label_alt: "REIMU  ·  MARISA  ·  CIRNO  ·  SAKUYA  ·  REMILIA"
       tooltip: true
       callbacks:
         on_left: "do_nothing"
