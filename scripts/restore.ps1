@@ -1,9 +1,9 @@
-$ErrorActionPreference = "Stop"
-
 param(
     [Parameter(Mandatory = $true)]
     [string]$BackupPath
 )
+
+$ErrorActionPreference = "Stop"
 
 if (-not (Test-Path $BackupPath)) {
     throw "backup path does not exist: $BackupPath"
