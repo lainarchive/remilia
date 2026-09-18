@@ -213,25 +213,52 @@
     color: var(--text);
 }
 
-.clock-widget {
+.clock-date-widget {
     background-color: transparent;
-    margin-left: 5px;
-    margin-right: 6px;
+    margin-left: 4px;
+    margin-right: 1px;
+    padding: 0;
 }
 
-.clock-widget .label {
-    font-size: 12px;
+.clock-date-widget .label {
+    font-size: 10px;
     font-family: "GoMono Nerd Font";
-    color: var(--text);
+    color: var(--muted);
     font-weight: 600;
+    letter-spacing: 0.2px;
     border: 0;
-    margin: 0 2px;
+    margin: 0;
     border-radius: 0;
     background-color: transparent;
-    padding: 0 7px;
+    padding: 0 3px;
 }
 
-.clock-widget .label:hover {
+.clock-date-widget .label:hover {
+    color: var(--text);
+}
+
+.clock-time-widget {
+    background-color: transparent;
+    margin-left: 1px;
+    margin-right: 6px;
+    padding: 0;
+    border-left: 1px solid var(--border2);
+}
+
+.clock-time-widget .label {
+    font-size: 13px;
+    font-family: "GoMono Nerd Font";
+    color: var(--text);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border: 0;
+    margin: 0;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 0 6px;
+}
+
+.clock-time-widget .label:hover {
     color: var(--wine3);
 }
 
