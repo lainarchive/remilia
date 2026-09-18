@@ -194,10 +194,10 @@ keybindings:
   # WORKSPACES
   # -------------------------
 
-  - commands: ["focus --workspace MAIN"]
+  - commands: ["focus --workspace CODE"]
     bindings: ["alt+1"]
 
-  - commands: ["focus --workspace CODE"]
+  - commands: ["focus --workspace MAIN"]
     bindings: ["alt+2"]
 
   - commands: ["focus --workspace ROBLOX"]
