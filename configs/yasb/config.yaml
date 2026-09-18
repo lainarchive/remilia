@@ -117,7 +117,7 @@ widgets:
     type: "yasb.custom.CustomWidget"
     options:
       class_name: "touhou-widget"
-      label: "<img src='file:///C:/Users/User/remilia/assets/yasb/touhou/touhou_rail.svg' width='116' height='22'>"
+      label: "<img src='file:///C:/Users/User/remilia/assets/yasb/touhou/touhou_rail.svg' width='172' height='32'>"
       label_alt: "REIMU  ·  MARISA  ·  CIRNO  ·  SAKUYA  ·  REMILIA"
       tooltip: true
       callbacks:
