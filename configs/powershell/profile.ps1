@@ -9,7 +9,7 @@ $OhMyPoshTheme = Join-Path $RemiliaRoot 'configs\oh-my-posh\remilia.omp.json'
 # Fastfetch
 if ((Get-Command fastfetch -ErrorAction SilentlyContinue) -and
     (Test-Path -LiteralPath $FastfetchConfig)) {
-    fastfetch --config $FastfetchConfig --raw $FastfetchLogo --logo-width 25 --logo-height 19 --pipe false
+    fastfetch --config $FastfetchConfig --sixel $FastfetchLogo --logo-width 25 --logo-height 19 --pipe false
 }
 
 # Oh My Posh
