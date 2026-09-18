@@ -11,10 +11,11 @@
       "left": 1,
       "right": 5
     },
-    "printRemaining": true,
+    "printRemaining": false
   },
 
   "display": {
+    "pipe": false,
     "separator": "  ",
     "color": {
       "keys": "#C05A78",
