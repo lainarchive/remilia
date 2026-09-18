@@ -1,59 +1,49 @@
-/* =========================================
-   VARIABLES AND DEFAULT SETTINGS
-   ========================================= */
+/* REMILIA — YASB VISUAL SYSTEM */
 
 :root {
-    --hover: #a9abc0;
-    --hover2: #678ecc;
-    --bg: #223343;
-    --bg2: #314d6b;
-    --Text: #b7c2e9;
-    --Text2: #657c9f;
-    --border: #a9abc0;
+    --bg: #090709;
+    --bg2: #151014;
+    --wine: #6f263f;
+    --wine2: #9a3b59;
+    --text: #e8dedf;
+    --muted: #9b898e;
+    --border: #351722;
 }
 
 * {
     font-size: 12px;
-    color: var(--Text);
+    color: var(--text);
     font-weight: 600;
-    font-family: "JetBrainsMono NFP";
+    font-family: "GoMono Nerd Font";
     margin: 0;
     padding: 0;
 }
-
-
-/* =========================================
-   GENERAL CONFIGURATIONS
-   ========================================= */
 
 .yasb-bar {
     padding: 0;
     margin: 0;
     background-color: var(--bg);
     border: 1px solid var(--border);
-    border-radius: 14px;
+    border-radius: 10px;
 }
 
+.widget {
+    padding: 0;
+    margin: 0 4px;
+}
 
-/* =========================================
-   GLOBAL CONTEXT MENU
-   ========================================= */
+.widget .icon { font-size: 17px; }
+.widget .label { color: var(--text); }
 
 .context-menu,
 .context-menu .menu-checkbox {
-    background-color: var(--bg);
-    padding: 4px 0px;
+    background-color: var(--bg2);
+    padding: 4px 0;
     border: 1px solid var(--border);
     border-radius: 8px;
     font-family: "GoMono Nerd Font";
     font-size: 12px;
-    color: var(--Text);
-}
-
-.context-menu::right-arrow {
-    width: 8px;
-    height: 8px;
-    padding-right: 24px;
+    color: var(--text);
 }
 
 .context-menu::item,
@@ -61,125 +51,34 @@
     background-color: transparent;
     padding: 6px 12px;
     margin: 2px 6px;
-    border-radius: 8px;
+    border-radius: 6px;
     min-width: 100px;
 }
 
 .context-menu::item:selected,
 .context-menu .menu-checkbox:hover {
-    background-color: var(--bg2);
-    color: var(--Text);
-    border-radius: 8px;
-    font-size: 12px;
+    background-color: var(--wine);
+    color: var(--text);
 }
 
-.context-menu::separator {
-    height: 0px;
-    background-color: var(--bg);
-}
-
-.context-menu::item:disabled {
-    color: var(--Text2);
-    font-size: 12px;
-    background-color: transparent;
-}
-
-.context-menu .menu-checkbox .checkbox {
-    border: none;
-    padding: 8px 16px;
-    font-size: 12px;
-    margin: 0;
-    color: var(--Text);
-    font-family: "GoMono Nerd Font";
-}
-
-.context-menu .submenu::item:disabled {
-    margin: 0;
-    padding-left: 16px;
-    font-size: 12px;
-}
-
-.context-menu .menu-checkbox .checkbox:unchecked {
-    color: var(--Text);
-}
-
-.context-menu .menu-checkbox .checkbox::indicator {
-    width: 12px;
-    height: 12px;
-    margin-left: 0px;
-    margin-right: 8px;
-}
-
-.context-menu .menu-checkbox .checkbox::indicator:unchecked {
-    background: var(--hover);
-    border-radius: 5px;
-    height: 4px;
-    width: 4px;
-}
-
-.context-menu .menu-checkbox .checkbox::indicator:checked {
-    background: var(--Text);
-    border-radius: 5px;
-    height: 4px;
-    width: 4px;
-}
-
-.context-menu .menu-checkbox .checkbox:focus {
-    outline: none;
-}
-
-
-/* =========================================
-   TOOLTIP
-   ========================================= */
+.context-menu::separator { height: 0px; background-color: transparent; }
+.context-menu::item:disabled { color: var(--muted); background-color: transparent; }
 
 .tooltip {
-    background-color: var(--bg);
+    background-color: var(--bg2);
     border: 1px solid var(--border);
-    border-radius: 14px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    padding-left: 6px;
-    padding-right: 6px;
-}
-
-
-/* =========================================
-   BASE WIDGET
-   ========================================= */
-
-.widget {
-    padding: 0;
-    margin: 0 4px;
-}
-
-.widget .icon {
-    font-size: 17px;
-}
-
-.widget .label {
-    color: var(--Text);
-}
-
-
-/* =========================================
-   HOME WIDGET
-   ========================================= */
-
-.home-widget {
+    border-radius: 8px;
+    padding: 6px;
 }
 
 .home-widget .label {
     font-family: "GoMono Nerd Font";
-    padding: 0px 8px;
+    padding: 0 8px;
     margin-right: -8px;
 }
 
-
-/* HOME DROPDOWN */
-
 .home-menu {
-    background-color: var(--bg);
+    background-color: var(--bg2);
     margin-left: 6px;
 }
 
@@ -187,256 +86,149 @@
     padding: 8px 10px 10px 8px;
     font-size: 12px;
     font-family: "GoMono Nerd Font";
-    font-weight: 600;
     margin-left: 6px;
 }
 
 .home-menu .menu-item:hover {
-    background-color: var(--hover);
-    color: var(--Text);
-    margin-left: 6px;
+    background-color: var(--wine);
+    color: var(--text);
 }
 
-
-/* =========================================
-   GLAZEWM TILING DIRECTION
-   ========================================= */
-
-.glazewm-tiling-direction {
-    background-color: var(--bg);
-    height: 1px;
-}
+.glazewm-tiling-direction { background-color: transparent; height: 1px; }
 
 .glazewm-tiling-direction .label {
     font-size: 12px;
-    color: var(--Text);
-    margin-bottom: 0px;
+    color: var(--muted);
     font-family: "GoMono Nerd Font";
-    font-weight: 600;
 }
 
-
-/* =========================================
-   GLAZEWM WORKSPACES
-   ========================================= */
-
-.glazewm-workspaces {
-    background-color: var(--bg);
-}
-
-.glazewm-workspaces .offline-status {
-    color: var(--Text);
-    font-size: 12px;
-}
-
-/* Workspace buttons */
+.glazewm-workspaces { background-color: transparent; }
+.glazewm-workspaces .offline-status { color: var(--muted); font-size: 12px; }
 
 .glazewm-workspaces .ws-btn {
     border: none;
     font-family: "GoMono Nerd Font";
     font-size: 12px;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-color: var(--bg);
-    font-weight: 600;
+    padding: 5px 8px;
+    background-color: transparent;
+    color: var(--muted);
 }
-
-/* Populated workspace */
 
 .glazewm-workspaces .ws-btn.populated {
-    background-color: var(--bg);
-    font-family: "GoMono Nerd Font";
-    color: var(--Text);
-    font-weight: 600;
+    background-color: transparent;
+    color: var(--text);
 }
-
-/* Active workspace */
 
 .glazewm-workspaces .ws-btn.active {
-    background-color: var(--hover);
-    color: var(--bg);
-    border: 2px solid var(--bg);
-    font-family: "GoMono Nerd Font";
-    font-weight: 600;
-    border-radius: 8px;
+    background-color: var(--wine);
+    color: var(--text);
+    border: 1px solid var(--wine2);
+    border-radius: 6px;
 }
 
-
-/* =========================================
-   CLOCK
-   ========================================= */
-
-.clock-widget {
-    background-color: var(--bg);
-}
+.clock-widget { background-color: transparent; }
 
 .clock-widget .label {
     font-size: 12px;
     font-family: "GoMono Nerd Font";
-    color: var(--bg);
+    color: var(--text);
     font-weight: 600;
-    border: 2px solid var(--hover);
-    margin: 4px 4px;
-    border-radius: 8px;
-    background-color: var(--hover);
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-right: 0px;
+    border: 0;
+    margin: 0 2px;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 0 5px;
 }
 
-
-/* CLOCK CALENDAR POPUP */
-
-.clock-popup.calendar {
-    background-color: var(--bg);
+.clock-popup.calendar,
+.audio-menu,
+.media-menu,
+.wallpapers-gallery-window,
+.taskbar-preview {
+    background-color: var(--bg2);
     border: 1px solid var(--border);
     border-radius: 8px;
 }
 
 .calendar .calendar-table::item {
-    background-color: var(--bg);
-    color: var(--Text);
+    background-color: var(--bg2);
+    color: var(--text);
     font-family: "GoMono Nerd Font";
     border: none;
     outline: none;
 }
 
-.clock-popup.calendar .calendar-table {
-    background-color: transparent;
-}
-
-.calendar .day-label {
-    margin-top: 20px;
-}
+.clock-popup.calendar .calendar-table { background-color: transparent; }
 
 .calendar .day-label,
 .calendar .month-label,
 .calendar .date-label {
     font-family: "GoMono Nerd Font";
-    font-size: 12px;
-    color: var(--Text);
-    font-weight: 700;
+    color: var(--text);
     min-width: 180px;
     max-width: 180px;
 }
 
-.calendar .month-label {
-    font-weight: normal;
-}
+.calendar .day-label { margin-top: 20px; font-size: 12px; }
+.calendar .month-label { font-size: 12px; font-weight: normal; }
+.calendar .date-label { font-size: 88px; font-weight: 900; }
 
-.calendar .date-label {
-    font-size: 88px;
-    font-weight: 900;
-    color: var(--Text);
-}
-
-
-/* =========================================
-   AUDIO WIDGET
-   ========================================= */
-
-.volume-widget {
-    background-color: var(--bg);
-}
+.volume-widget { background-color: transparent; }
 
 .volume-widget .icon {
-    padding: 0px;
-    color: var(--Text);
-    padding-left: 0px;
-    padding-top: 0;
-    margin: 0px 3px;
+    color: var(--text);
+    padding: 0;
+    margin: 0 3px;
 }
 
 .volume-widget .label {
     font-size: 12px;
-    font-family: "JetBrainsMono NFP";
-    color: var(--Text);
+    font-family: "GoMono Nerd Font";
+    color: var(--muted);
     padding-bottom: 1px;
-}
-
-
-/* AUDIO DROPDOWN */
-
-.audio-menu {
-    background-color: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 8px;
 }
 
 .audio-container .device {
     font-family: "GoMono Nerd Font";
-    background-color: var(--bg);
+    background-color: transparent;
     border: none;
-    padding: 6px 6px 6px 4px;
+    padding: 6px;
     margin: 2px 0;
     font-size: 12px;
     border-radius: 4px;
 }
 
 .audio-container .device.selected {
-    background-color: var(--hover);
-    color: var(--bg);
-    border: 2px solid var(--hover);
-    border-radius: 8px;
-}
-
-.audio-container .device.selected:hover {
-    background-color: var(--hover);
-    color: var(--bg);
-    border: 0px solid var(--border);
-    border-radius: 8px;
+    background-color: var(--wine);
+    color: var(--text);
+    border: 1px solid var(--wine2);
+    border-radius: 6px;
 }
 
 .audio-container .device:hover {
-    background-color: var(--bg2);
-    color: var(--Text);
-    border: 0px solid var(--bg2);
-    border-radius: 8px;
+    background-color: #24151c;
+    color: var(--text);
+    border-radius: 6px;
 }
 
-
-/* =========================================
-   MEDIA WIDGET
-   ========================================= */
-
-.media-widget {
-    background-color: var(--bg);
-}
+.media-widget { background-color: transparent; }
 
 .media-widget .label {
     font-family: "GoMono Nerd Font";
     font-size: 12px;
-    color: var(--bg);
-    background-color: var(--hover);
-    margin: 4px 4px;
-    border: 2px solid var(--hover);
-    border-radius: 8px;
-    padding-left: 6px;
-    padding-right: 6px;
+    color: var(--text);
+    background-color: transparent;
+    margin: 0 4px;
+    border: 0;
+    border-radius: 0;
+    padding: 0 6px;
 }
 
-.media-widget .btn {
-    color: var(--Text);
-    padding-left: -20px;
-}
+.media-widget .btn { color: var(--muted); padding-left: -20px; }
 
+.media-menu { min-width: 416px; max-width: 416px; }
 
-/* MEDIA POPUP */
-
-.media-menu {
-    min-width: 416px;
-    max-width: 416px;
-    background-color: var(--bg);
-    border-radius: 8px;
-    border: 1px solid var(--border);
-}
-
-.media-menu .thumbnail {
-    border: 0px solid var(--bg);
-    border-radius: 8px;
-}
+.media-menu .thumbnail { border: 0; border-radius: 8px; }
 
 .media-menu .title,
 .media-menu .artist,
@@ -444,45 +236,16 @@
     font-size: 12px;
     font-weight: 600;
     font-family: "GoMono Nerd Font";
-    color: var(--Text);
+    color: var(--text);
     margin-left: 10px;
 }
 
-.media-menu .artist {
-    font-size: 12px;
-    color: var(--Text2);
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
+.media-menu .artist { color: var(--muted); }
 .media-menu .source {
-    font-size: 12px;
     color: var(--bg);
-    font-weight: 600;
-    font-family: "GoMono Nerd Font";
-    border-radius: 8px;
-    background-color: var(--Text);
+    background-color: var(--text);
+    border-radius: 6px;
     padding: 2px 6px;
-}
-
-.media-menu .source.firefox {
-    background-color: #ff583b;
-    color: #e5e7eb;
-}
-
-.media-menu .source.spotify {
-    background-color: #199143;
-    color: #e5e7eb;
-}
-
-.media-menu .source.edge {
-    background-color: #0078d4;
-    color: #e5e7eb;
-}
-
-.media-menu .source.windows-media {
-    background-color: #0078d4;
-    color: #e5e7eb;
 }
 
 .media-menu .btn {
@@ -493,34 +256,20 @@
     max-width: 40px;
     min-height: 40px;
     max-height: 40px;
-    color: var(--Text);
+    color: var(--text);
 }
 
-.media-menu .btn.prev {
-    margin-left: 10px;
-    color: var(--Text);
-}
-
-.media-menu .btn:hover {
-    background-color: transparent;
-}
-
-.media-menu .btn.play {
-    background-color: var(--bg);
-    font-size: 20px;
-}
-
+.media-menu .btn.prev { margin-left: 10px; }
+.media-menu .btn:hover { background-color: transparent; }
+.media-menu .btn.play { background-color: transparent; font-size: 20px; }
 .media-menu .btn.disabled:hover,
-.media-menu .btn.disabled {
-    color: var(--Text);
-    background-color: rgba(0, 0, 0, 0);
-}
+.media-menu .btn.disabled { color: var(--muted); background-color: transparent; }
 
 .media-menu .playback-time {
     font-size: 12px;
-    font-family: Arial;
+    font-family: "GoMono Nerd Font";
     font-weight: 600;
-    color: var(--Text);
+    color: var(--text);
     margin-top: 10px;
     margin-bottom: 5px;
     min-width: 100px;
@@ -529,86 +278,45 @@
 .media-menu .progress-slider {
     height: 5px;
     border-radius: 8px;
-    background-color: var(--Text2);
+    background-color: #3b2730;
 }
 
-.media-menu .progress-slider::groove {
-    height: 4px;
-    border-radius: 3px;
-    color: var(--hover);
-}
-
-.media-menu .progress-slider::groove:hover {
-    height: 6px;
-    border-radius: 3px;
-}
-
-.media-menu .progress-slider::sub-page {
-    background: var(--hover);
-    border-radius: 8px;
-    height: 4px;
-}
-
-
-/* =========================================
-   WALLPAPER GALLERY
-   ========================================= */
-
-.wallpapers-gallery-window {
-    background-color: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-}
+.media-menu .progress-slider::groove { height: 4px; border-radius: 3px; color: var(--wine); }
+.media-menu .progress-slider::groove:hover { height: 6px; border-radius: 3px; }
+.media-menu .progress-slider::sub-page { background: var(--wine2); border-radius: 8px; height: 4px; }
 
 .wallpapers-gallery-buttons {
     font-size: 12px;
     font-family: "GoMono Nerd Font";
-    background-color: var(--bg2);
-    color: var(--Text);
-    padding: 8px 0px;
+    background-color: #21131a;
+    color: var(--text);
+    padding: 8px 0;
     margin: 8px;
     width: 600px;
-    border-radius: 8px;
+    border-radius: 6px;
 }
 
-.wallpapers-gallery-buttons:hover {
-    background-color: var(--hover);
-    color: var(--bg);
-}
+.wallpapers-gallery-buttons:hover { background-color: var(--wine); color: var(--text); }
 
 .wallpapers-gallery-image {
-    border: 4px solid var(--border);
-    border-radius: 8px;
+    border: 2px solid var(--border);
+    border-radius: 6px;
     margin-right: 5px;
 }
 
-.wallpapers-gallery-image:hover {
-    border: 4px solid var(--hover);
-    border-radius: 8px;
-}
-
-.wallpapers-gallery-image.focused {
-}
-
-
-/* =========================================
-   POWER WIDGET
-   ========================================= */
+.wallpapers-gallery-image:hover { border: 2px solid var(--wine2); border-radius: 6px; }
 
 .power-menu-widget .label {
-    color: var(--Text);
+    color: var(--muted);
     font-size: 17px;
-    padding: 0px 8px;
+    padding: 0 8px;
     margin-left: -8px;
 }
-
-
-/* POWER MENU POPUP */
 
 .uptime {
     font-size: 12px;
     margin-bottom: 10px;
-    color: var(--Text);
+    color: var(--muted);
     font-weight: 400;
     font-family: "GoMono Nerd Font";
 }
@@ -618,73 +326,37 @@
     margin: 5px;
     width: 160px;
     height: 50px;
-    border-radius: 8px;
-    background-color: var(--bg);
+    border-radius: 6px;
+    background-color: transparent;
     font-family: "GoMono Nerd Font";
-    color: var(--Text);
+    color: var(--text);
     border: 1px solid var(--border);
 }
 
-.power-menu-popup .button.hover {
-    background-color: var(--hover);
-}
+.power-menu-popup .button.hover { background-color: var(--wine); }
+.power-menu-popup .button .label { font-size: 14px; color: var(--text); font-family: "GoMono Nerd Font"; }
+.power-menu-popup .button.hover .label { color: var(--text); }
+.power-menu-popup .button .icon { font-size: 64px; padding-top: 54px; color: var(--text); }
 
-.power-menu-popup .button .label {
-    margin-bottom: 0px;
-    font-size: 14px;
-    color: var(--Text);
-    font-family: "GoMono Nerd Font";
-    font-weight: 600;
-}
-
-.power-menu-popup .button.hover .label {
-    color: var(--bg);
-}
-
-.power-menu-popup .button .icon {
-    font-size: 64px;
-    padding-top: 54px;
-    color: var(--Text);
-}
-
-.power-menu-popup .button.cancel .icon {
-    color: #EA6962;
-}
-
-.power-menu-popup .button.cancel .label {
-    color: #EA6962;
-}
-
-
-/* =========================================
-   CAVA
-   ========================================= */
+.power-menu-popup .button.cancel .icon,
+.power-menu-popup .button.cancel .label { color: #b66a78; }
 
 .cava-widget {
-    background-color: var(--hover);
-    margin: 4px 4px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 8px;
+    background-color: transparent;
+    margin: 0 4px;
+    padding: 0 6px;
 }
 
-
-/* =========================================
-   SYSTEM TRAY
-   ========================================= */
-
-.systray {
-    padding-left: 0px;
-}
+.systray { padding-left: 0; }
 
 .systray .button {
     background: transparent;
-    border-radius: 8px;
-    padding: 2px 2px;
+    border-radius: 6px;
+    padding: 2px;
 }
 
 .systray .unpinned-visibility-btn {
-    color: var(--Text);
+    color: var(--muted);
     font-family: "Segoe Fluent Icons";
     font-size: 16px;
     border-radius: 4px;
@@ -692,112 +364,60 @@
     width: 16px;
 }
 
+.taskbar-widget .app-container { background-color: transparent; }
+.taskbar-widget .app-container.foreground { background-color: transparent; }
+.taskbar-widget .app-container.running { background-color: transparent; }
 
-/* =========================================
-   TASKBAR
-   ========================================= */
-
-.taskbar-widget .app-container {
-    background-color: var(--bg);
-}
-
-.taskbar-widget .app-container.foreground {
-    background-color: var(--bg);
-}
-
-.taskbar-widget .app-container.foreground .app-title:hover {
-    margin: 3px 3px;
-    background-color: var(--hover2);
-    border-color: var(--hover2);
-    color: var(--bg);
-    border-radius: 8px;
-}
-
-.taskbar-widget .app-container.flashing .app-title {
-    background-color: #efe0d5;
-    margin: 4px 4px;
-    border-radius: 8px;
-    border-color: #efe0d5;
-}
-
-.taskbar-widget .app-container.running {
-    background-color: var(--bg);
-}
-
-.taskbar-widget .app-container.running .app-title:hover {
-    color: var(--bg);
-    background-color: var(--hover2);
-    border-color: var(--hover2);
-    margin: 3px 3px;
-    border-radius: 8px;
+.taskbar-widget .app-container .app-title {
+    color: var(--muted);
+    font-family: "GoMono Nerd Font";
+    padding: 0 6px;
+    margin: 4px 3px;
+    border: 0;
+    background-color: transparent;
+    border-radius: 4px;
 }
 
 .taskbar-widget .app-container.running .app-title {
-    color: var(--bg);
+    color: var(--text);
     font-family: "GoMono Nerd Font";
-    padding-left: 6px;
-    padding-right: 6px;
-    margin: 4px 4px;
-    border: 2px solid var(--hover);
-    background-color: var(--hover);
-    border-radius: 8px;
+    padding: 0 6px;
+    margin: 4px 3px;
+    border: 0;
+    background-color: transparent;
+    border-bottom: 1px solid var(--wine);
+    border-radius: 0;
 }
 
-.taskbar-widget .app-container .app-title {
-    color: var(--bg);
-    font-family: "GoMono Nerd Font";
-    padding-left: 6px;
-    padding-right: 6px;
-    margin: 4px 4px;
-    border: 2px solid var(--Text);
-    background-color: var(--Text);
-    border-radius: 8px;
+.taskbar-widget .app-container.foreground .app-title:hover,
+.taskbar-widget .app-container.running .app-title:hover {
+    color: var(--text);
+    background-color: #24151c;
+    border-radius: 4px;
 }
 
-
-/* TASKBAR PREVIEW */
-
-.taskbar-preview {
-    background-color: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 8px;
+.taskbar-widget .app-container.flashing .app-title {
+    background-color: var(--wine);
+    color: var(--text);
+    margin: 4px 3px;
+    border-radius: 4px;
 }
 
-.taskbar-preview.flashing {
-    background-color: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-}
-
-.taskbar-preview .header {
-    padding-bottom: 12px;
-    padding-top: 4px;
-}
-
+.taskbar-preview .header { padding-bottom: 12px; padding-top: 4px; }
 .taskbar-preview .header .title {
-    color: var(--Text);
+    color: var(--text);
     font-family: "GoMono Nerd Font";
     font-weight: 600;
     font-size: 12px;
 }
 
-
-/* =========================================
-   SEPARATOR
-   ========================================= */
-
 .separator-widget .widget-container .label {
-    color: var(--Text);
+    color: var(--wine2);
     margin-left: -8px;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
-
-/* =========================================
-   GENERIC CUSTOM WIDGET
-   ========================================= */
-
 .custom-widget .widget-container .label {
-    padding: 0px 8px;
+    padding: 0 8px;
     margin-right: -10px;
 }
