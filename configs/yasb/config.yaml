@@ -118,14 +118,14 @@ widgets:
     options:
       label: "{data}"
       class_name: "touhou-widget"
-      image_icon_size: 20
+      image_icon_size: 24
       tooltip: true
       app_list:
-        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\bllm.png", launch: "cmd.exe /c exit", name: "Reimu Hakurei" }
-        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\mls.png", launch: "cmd.exe /c exit", name: "Marisa Kirisame" }
-        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\qln.png", launch: "cmd.exe /c exit", name: "Cirno" }
-        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\xy.png", launch: "cmd.exe /c exit", name: "Sakuya Izayoi" }
-        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\lmly.png", launch: "cmd.exe /c exit", name: "Remilia Scarlet" }
+        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\bar_reimu.png", launch: "cmd.exe /c exit", name: "Reimu Hakurei" }
+        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\bar_marisa.png", launch: "cmd.exe /c exit", name: "Marisa Kirisame" }
+        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\bar_cirno.png", launch: "cmd.exe /c exit", name: "Cirno" }
+        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\bar_sakuya.png", launch: "cmd.exe /c exit", name: "Sakuya Izayoi" }
+        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\bar_remilia.png", launch: "cmd.exe /c exit", name: "Remilia Scarlet" }
         - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\fldl.png", launch: "cmd.exe /c exit", name: "Flandre Scarlet" }
         - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\hml.png", launch: "cmd.exe /c exit", name: "Hong Meiling" }
         - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\pql.png", launch: "cmd.exe /c exit", name: "Patchouli Knowledge" }
