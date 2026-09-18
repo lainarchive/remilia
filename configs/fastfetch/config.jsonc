@@ -3,7 +3,7 @@
 
   "logo": {
     "type": "raw",
-    "source": "%FASTFETCH_REPO_ROOT%/manga.six",
+    "source": "%USERPROFILE%/remilia/configs/fastfetch/manga.six",
     "width": 25,
     "height": 19,
     "padding": {
