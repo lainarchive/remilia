@@ -46,7 +46,8 @@ bars:
           "glazewm_tiling_direction",
           "remilia_divider",
           "active_window",
-          "clock",
+          "clock_date",
+          "clock_time",
         ]
 
       center:
@@ -258,11 +259,27 @@ widgets:
       monitor_exclusive: false
 
 
-  clock:
+  clock_date:
     type: "yasb.clock.ClockWidget"
     options:
-      label: "{%d %b}  ·  {%H:%M}"
-      label_alt: "{%A, %d %B %Y %H:%M}"
+      label: "{%d %b}"
+      label_alt: "{%A, %d %B %Y}"
+      tooltip: false
+      timezones: []
+
+      calendar:
+        alignment: "center"
+        direction: "down"
+        blur: false
+        round_corners: true
+        round_corners_type: "normal"
+
+
+  clock_time:
+    type: "yasb.clock.ClockWidget"
+    options:
+      label: "{%H:%M}"
+      label_alt: "{%H:%M:%S}"
       tooltip: false
       timezones: []
 
