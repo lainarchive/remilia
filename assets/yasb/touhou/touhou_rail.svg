@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="116" height="22" viewBox="0 0 116 22">
+<defs>
+  <filter id="g"><feGaussianBlur stdDeviation="0.6"/></filter>
+</defs>
+<g transform="translate(1 1)">
+  <circle cx="10" cy="10" r="9" fill="#160b10" stroke="#7e304a" stroke-width="1.4"/>
+  <path d="M4 6.5 10 3.7 16 6.5 14.4 10.3 10 8.1 5.6 10.3Z" fill="#c94b72"/>
+  <circle cx="10" cy="10.5" r="3.8" fill="#eadfe1"/>
+</g>
+<g transform="translate(24 1)">
+  <circle cx="10" cy="10" r="9" fill="#100e13" stroke="#6f263f" stroke-width="1.4"/>
+  <path d="M4 8.2h12L14.2 4H5.8Z" fill="#d9d0d4"/>
+  <path d="M6 4.2h8l-1.6-2.4H7.6Z" fill="#27232b"/>
+  <path d="m10 3.1 1 1.8 2 .2-1.5 1.2.5 2-2-1-2 1 .5-2L7 5.1l2-.2Z" fill="#d7ad42"/>
+</g>
+<g transform="translate(47 1)">
+  <circle cx="10" cy="10" r="9" fill="#0e1318" stroke="#5da3c6" stroke-width="1.4"/>
+  <path d="M5 6 2.8 3.8 4 2.8l3 2.4Z M15 6l2.2-2.2L16 2.8l-3 2.4Z" fill="#8ed7ef"/>
+  <path d="M7 8.3 10 5.4l3 2.9-3 3Z" fill="#8ed7ef"/>
+  <path d="M8 13.5 10 17l2-3.5-2-1.2Z" fill="#5da3c6"/>
+</g>
+<g transform="translate(70 1)">
+  <circle cx="10" cy="10" r="9" fill="#111015" stroke="#9ea4bf" stroke-width="1.4"/>
+  <circle cx="10" cy="10" r="5.2" fill="#d9d5c8"/>
+  <circle cx="10" cy="10" r="1.1" fill="#6d496d"/>
+  <path d="M10 10V6.8 M10 10l2.4 1.8" stroke="#4e4b57" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M4.5 4.2h11" stroke="#b9c6e2" stroke-width="1.6" stroke-linecap="round"/>
+</g>
+<g transform="translate(93 1)">
+  <circle cx="10" cy="10" r="9" fill="#140a10" stroke="#a64261" stroke-width="1.4"/>
+  <path d="M8.5 9 3 4 2.5 9.2 5.6 11.2 2.8 15.2 8.4 12Z" fill="#b53f62"/>
+  <path d="M11.5 9 17 4l.5 5.2-3.1 2L17.2 15.2 11.6 12Z" fill="#b53f62"/>
+  <circle cx="10" cy="10" r="3.2" fill="#e8d8dc"/>
+</g>
+</svg>
