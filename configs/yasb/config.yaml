@@ -44,7 +44,7 @@ bars:
           "remilia_ornaments",
           "glazewm_workspaces",
           "glazewm_tiling_direction",
-          "lines",
+          "remilia_divider",
           "active_window",
           "clock",
         ]
@@ -59,12 +59,12 @@ bars:
           "media",
           "cava",
           "volume",
-          "lines",
+          "remilia_divider",
           "cpu",
           "memory",
           "traffic",
           "wifi",
-          "lines",
+          "remilia_divider",
           "systray",
           "wallpapers",
           "power_menu"
@@ -526,15 +526,15 @@ widgets:
         classes: []
 
 
-  lines:
-    type: "yasb.custom.CustomWidget"
+  remilia_divider:
+    type: "yasb.applications.ApplicationsWidget"
     options:
-      label: "│"
-      label_alt: "│"
-      class_name: "separator-widget"
-
-      callbacks:
-        on_left: "do_nothing"
+      label: "{data}"
+      class_name: "remilia-divider"
+      image_icon_size: 36
+      tooltip: false
+      app_list:
+        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\ornaments\\divider.svg", launch: "cmd.exe /c exit", name: "Ornamental Divider" }
 
 
   win_button:
