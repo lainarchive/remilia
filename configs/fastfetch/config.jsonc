@@ -1,7 +1,22 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
 
-  "logo": null,
+  "logo": {
+    "type": "file",
+    "source": "%USERPROFILE%/remilia/configs/fastfetch/scarlet.txt",
+    "padding": {
+      "top": 1,
+      "left": 1,
+      "right": 5
+    },
+    "printRemaining": false,
+    "color": {
+      "1": "#C05A78",
+      "2": "#F1E8EA",
+      "3": "#8D2E4B",
+      "4": "#4A1D2B"
+    }
+  },
 
   "display": {
     "pipe": false,
