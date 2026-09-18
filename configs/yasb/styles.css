@@ -630,11 +630,33 @@
     font-size: 12px;
 }
 
-.separator-widget .widget-container .label {
-    color: var(--wine2);
-    margin-left: -8px;
-    margin-top: 0;
-    font-size: 11px;
+.remilia-divider {
+    background-color: transparent;
+    margin: 0 2px;
+    padding: 0;
+}
+
+.remilia-divider .widget-container {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.remilia-divider .widget-container .label {
+    background-color: transparent;
+    border: 0;
+    padding: 0 2px;
+    margin: 0;
+    min-width: 36px;
+    min-height: 12px;
+    opacity: 0.9;
+}
+
+.remilia-divider .widget-container .label:hover {
+    background-color: transparent;
+    border: 0;
+    opacity: 1;
 }
 
 .custom-widget .widget-container .label {
