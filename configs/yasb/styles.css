@@ -274,15 +274,15 @@
 .system-stat-widget,
 .network-widget {
     background-color: transparent;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 1px;
+    margin-right: 1px;
 }
 
 .system-stat-widget .label,
 .network-widget .label {
     color: var(--muted);
-    font-size: 10px;
-    padding: 0 2px;
+    font-size: 9px;
+    padding: 0 3px;
 }
 
 .system-stat-widget .label:hover,
@@ -310,8 +310,8 @@
 
 .wifi-widget .label {
     color: var(--muted);
-    font-size: 12px;
-    padding: 0 2px;
+    font-size: 11px;
+    padding: 0 3px;
 }
 
 .wifi-widget .label:hover {
@@ -320,20 +320,22 @@
 
 .volume-widget {
     background-color: transparent;
-    margin-left: 2px;
+    margin-left: 1px;
+    margin-right: 1px;
 }
 
 .volume-widget .icon {
     color: var(--text);
     padding: 0;
-    margin: 0 3px;
+    margin: 0 2px;
 }
 
 .volume-widget .label {
-    font-size: 12px;
+    font-size: 10px;
     font-family: "GoMono Nerd Font";
     color: var(--muted);
     padding-bottom: 1px;
+    padding-left: 1px;
 }
 
 .audio-container .device {
@@ -361,19 +363,20 @@
 
 .media-widget {
     background-color: transparent;
-    margin-left: 3px;
-    margin-right: 2px;
+    margin-left: 2px;
+    margin-right: 1px;
+    padding: 0;
 }
 
 .media-widget .label {
     font-family: "GoMono Nerd Font";
-    font-size: 12px;
+    font-size: 11px;
     color: var(--text);
     background-color: transparent;
-    margin: 0 4px;
+    margin: 0 2px;
     border: 0;
     border-radius: 0;
-    padding: 0 6px;
+    padding: 0 4px;
 }
 
 .media-widget .label:hover {
@@ -485,10 +488,15 @@
     border-radius: 6px;
 }
 
+.power-menu-widget {
+    margin-left: 2px;
+    margin-right: 1px;
+}
+
 .power-menu-widget .label {
     color: var(--muted);
-    font-size: 15px;
-    padding: 0 4px;
+    font-size: 14px;
+    padding: 0 3px;
     margin-left: 0;
 }
 
@@ -538,19 +546,20 @@
     background-color: var(--bg3);
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
-    margin: 0 3px;
-    padding: 0 5px;
+    margin: 0 2px;
+    padding: 0 3px;
 }
 
 .systray {
     padding-left: 0;
-    margin-left: 2px;
+    margin-left: 1px;
+    margin-right: 1px;
 }
 
 .systray .button {
     background: transparent;
-    border-radius: 6px;
-    padding: 2px;
+    border-radius: 5px;
+    padding: 1px;
 }
 
 .systray .button:hover {
@@ -560,10 +569,10 @@
 .systray .unpinned-visibility-btn {
     color: var(--muted);
     font-family: "Segoe Fluent Icons";
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 4px;
-    height: 20px;
-    width: 16px;
+    height: 19px;
+    width: 14px;
 }
 
 .taskbar-widget {
@@ -646,10 +655,10 @@
 .remilia-divider .widget-container .label {
     background-color: transparent;
     border: 0;
-    padding: 0 2px;
+    padding: 0 1px;
     margin: 0;
-    min-width: 36px;
-    min-height: 12px;
+    min-width: 30px;
+    min-height: 10px;
     opacity: 0.9;
 }
 
@@ -697,10 +706,15 @@
 }
 
 
+.wallpapers-widget {
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
 .wallpapers-widget .label {
     color: var(--muted);
-    font-size: 13px;
-    padding: 0 3px;
+    font-size: 12px;
+    padding: 0 2px;
 }
 
 .wallpapers-widget .label:hover {
