@@ -1,10 +1,10 @@
-# powershell
+# Remilia PowerShell
 
-the live powershell profile can be stored here once the current profile is copied into the repository.
+The tracked PowerShell profile loads the repo-backed Fastfetch and Oh My Posh configs from:
 
-keep machine-specific paths parameterized where possible.
+- `configs/fastfetch/`
+- `configs/oh-my-posh/`
 
-do not store:
-- credentials
-- tokens
-- private environment values
+Machine-specific paths should stay outside the tracked config unless they are required by an installed tool.
+
+Do not commit credentials, tokens, private environment values, or unrelated personal scripts.
