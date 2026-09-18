@@ -11,7 +11,7 @@
     <SolidColorBrush x:Key="RemiliaPink">#FF6470</SolidColorBrush>
     <SolidColorBrush x:Key="RemiliaText">#F1E7EC</SolidColorBrush>
     <SolidColorBrush x:Key="RemiliaMuted">#A58D98</SolidColorBrush>
-    <Thickness x:Key="ResultMargin">8 3 8 3</Thickness>
+    <Thickness x:Key="ResultMargin">10 5 10 5</Thickness>
     <Style
         x:Key="ItemGlyph"
         TargetType="{x:Type TextBlock}">
@@ -23,10 +23,12 @@
         <Setter Property="Foreground" Value="#F1E7EC" />
         <Setter Property="CaretBrush" Value="#FF6470" />
         <Setter Property="SelectionBrush" Value="#7AD34B58" />
-        <Setter Property="Background" Value="#120E14" />
-        <Setter Property="BorderBrush" Value="#35202B" />
+        <Setter Property="Background" Value="#160F18" />
+        <Setter Property="BorderBrush" Value="#6B3042" />
         <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="Padding" Value="14 2 46 2" />
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="Padding" Value="16 4 50 4" />
+        <Setter Property="FontSize" Value="18" />
         <Setter Property="FontWeight" Value="SemiBold" />
     </Style>
 
@@ -41,14 +43,14 @@
         TargetType="{x:Type Border}">
         <Setter Property="Background" Value="#0B090D" />
         <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="BorderBrush" Value="#5A2C3A" />
-        <Setter Property="CornerRadius" Value="14" />
-        <Setter Property="Padding" Value="8" />
+        <Setter Property="BorderBrush" Value="#7A3549" />
+        <Setter Property="CornerRadius" Value="16" />
+        <Setter Property="Padding" Value="10" />
     </Style>
     <Style
         x:Key="SeparatorStyle"
         TargetType="{x:Type Rectangle}">
-        <Setter Property="Fill" Value="#35202B" />
+        <Setter Property="Fill" Value="#6B3042" />
         <Setter Property="Height" Value="1" />
         <Setter Property="Margin" Value="10 2 10 6" />
         <Setter Property="Opacity" Value="0.9" />
@@ -62,7 +64,7 @@
     <Style
         x:Key="PendingLineStyle"
         TargetType="{x:Type Line}">
-        <Setter Property="Stroke" Value="#D34B58" />
+        <Setter Property="Stroke" Value="#FF6470" />
     </Style>
     <Style
         x:Key="ItemTitleStyle"
@@ -79,14 +81,16 @@
     <Style
         x:Key="ItemTitleSelectedStyle"
         TargetType="{x:Type TextBlock}">
-        <Setter Property="Foreground" Value="#E8DCE2" />
+        <Setter Property="Foreground" Value="#FFF4F6" />
+        <Setter Property="FontWeight" Value="Bold" />
     </Style>
     <Style
         x:Key="ItemSubTitleSelectedStyle"
         TargetType="{x:Type TextBlock}">
-        <Setter Property="Foreground" Value="#C58A96" />
+        <Setter Property="Foreground" Value="#FFD0D5" />
+        <Setter Property="FontWeight" Value="SemiBold" />
     </Style>
-    <SolidColorBrush x:Key="ItemSelectedBackgroundColor">#7AD34B58</SolidColorBrush>
+    <SolidColorBrush x:Key="ItemSelectedBackgroundColor">#9A4A2535</SolidColorBrush>
     <Style
         x:Key="ThumbStyle"
         TargetType="{x:Type Thumb}">
@@ -154,7 +158,7 @@
     <Style
         x:Key="ClockBox"
         TargetType="{x:Type TextBlock}">
-        <Setter Property="Foreground" Value="#8D727D" />
+        <Setter Property="Foreground" Value="#C19EAA" />
     </Style>
     <Style
         x:Key="DateBox"
@@ -175,7 +179,7 @@
     <Style
         x:Key="PreviewItemSubTitleStyle"
         TargetType="{x:Type TextBlock}">
-        <Setter Property="Foreground" Value="#9A858F" />
+        <Setter Property="Foreground" Value="#A58D98" />
     </Style>
     <Style
         x:Key="PreviewGlyph"
