@@ -33,22 +33,22 @@
   "profiles": {
     "defaults": {
       "adjustIndistinguishableColors": "never",
-      "colorScheme": "Your Lie in April",
+      "colorScheme": "Remilia",
       "elevate": true,
       "font": {
         "face": "GoMono Nerd Font",
         "size": 12,
         "weight": "normal"
       },
-      "opacity": 78,
+      "opacity": 86,
       "scrollbarState": "hidden",
       "startingDirectory": "%USERPROFILE%",
-      "tabTitle": "Terminal",
+      "tabTitle": "Remilia",
       "useAcrylic": true
     },
     "list": [
       {
-        "colorScheme": "Lain Rice",
+        "colorScheme": "Remilia",
         "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\" -nologo",
         "elevate": true,
         "font": {
@@ -59,10 +59,12 @@
         "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
         "hidden": false,
         "name": "PowerShell",
-        "opacity": 84,
+        "opacity": 90,
         "source": "Windows.Terminal.PowershellCore",
         "startingDirectory": null,
-        "useAcrylic": false
+        "useAcrylic": true,
+        "tabColor": "#6F263F",
+        "tabTitle": "Remilia"
       },
       {
         "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
@@ -313,11 +315,34 @@
       "selectionBackground": "#3A2027",
       "white": "#D8D3D8",
       "yellow": "#D6B56D"
+    },
+    {
+      "background": "#090709",
+      "black": "#100B0F",
+      "blue": "#6F263F",
+      "brightBlack": "#3A2A31",
+      "brightBlue": "#9A3B59",
+      "brightCyan": "#B06A84",
+      "brightGreen": "#C0A0AA",
+      "brightPurple": "#C05A78",
+      "brightRed": "#C05A78",
+      "brightWhite": "#F1E8EA",
+      "brightYellow": "#D7B07B",
+      "cursorColor": "#C05A78",
+      "cyan": "#8A4B63",
+      "foreground": "#E8DEDF",
+      "green": "#9A7180",
+      "name": "Remilia",
+      "purple": "#9A3B59",
+      "red": "#7A2946",
+      "selectionBackground": "#351722",
+      "white": "#D9CACE",
+      "yellow": "#B8946A"
     }
   ],
   "tabSwitcherMode": "mru",
   "tabWidthMode": "compact",
-  "theme": "dark",
+  "theme": "Remilia Dark",
   "themes": [
     {
       "name": "Monochrome",
@@ -336,6 +361,28 @@
         "experimental.rainbowFrame": false,
         "frame": null,
         "unfocusedFrame": null,
+        "useMica": false
+      }
+    },
+    {
+      "name": "Remilia Dark",
+      "tab": {
+        "background": "#151014FF",
+        "iconStyle": "default",
+        "showCloseButton": "always",
+        "unfocusedBackground": "#0F0A0EFF"
+      },
+      "tabRow": {
+        "background": "#090709FF",
+        "unfocusedBackground": "#090709FF"
+      },
+      "window": {
+        "applicationTheme": "dark",
+        "experimental": {
+          "rainbowFrame": false
+        },
+        "frame": "#090709FF",
+        "unfocusedFrame": "#090709FF",
         "useMica": false
       }
     }
