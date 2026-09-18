@@ -100,7 +100,6 @@
         TargetType="{x:Type ScrollBar}" />
     <Style
         x:Key="HorizontalScrollBarStyle"
-        BasedOn="{StaticResource BaseHorizontalScrollBarStyle}"
         TargetType="{x:Type ScrollBar}" />
     <Style
         x:Key="HorizontalThumbStyle"
