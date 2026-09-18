@@ -1,13 +1,22 @@
-# local machine data
-*.bak
-*.tmp
+# local / generated
 *.log
+*.tmp
+*.bak
+Thumbs.db
+.DS_Store
 
 # secrets
 .env
+.env.*
 *.pem
 *.key
+*.pfx
 
-# generated/local environments
+# local environments
 .venv/
 node_modules/
+
+# private app data
+cookies/
+sessions/
+credentials/

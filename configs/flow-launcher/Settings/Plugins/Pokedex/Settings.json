@@ -1,0 +1,8 @@
+{
+  "show_pokemons_regionals": true,
+  "show_mega_evolutions": true,
+  "default_website": "bulbapedia",
+  "show_natures": true,
+  "show_pokemons_nationals": true,
+  "show_abilities": true
+}

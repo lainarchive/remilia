@@ -1,0 +1,10 @@
+{
+  "DefaultVSId": null,
+  "AutoUpdateBackup": true,
+  "LastBackup": "0001-01-01T00:00:00",
+  "EntriesBackup": null,
+  "VswherePath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Installer\\vswhere.exe",
+  "DisplayGitBranch": true,
+  "SearchGitBranch": true,
+  "SearchPath": true
+}

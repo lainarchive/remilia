@@ -1,0 +1,5 @@
+{
+  "ReminderIntervalMinutes": 60,
+  "SnoozeDurationMinutes": 10,
+  "NotificationSoundEnabled": true
+}

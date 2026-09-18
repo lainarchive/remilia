@@ -1,0 +1,303 @@
+general:
+  startup_commands: []
+  shutdown_commands: []
+  config_reload_commands: []
+
+  focus_follows_cursor: false
+  toggle_workspace_on_refocus: false
+
+  cursor_jump:
+    enabled: true
+    trigger: "monitor_focus"
+
+  hide_method: "cloak"
+  show_all_in_taskbar: false
+
+
+gaps:
+  scale_with_dpi: true
+  inner_gap: "6px"
+
+  outer_gap:
+    top: "48px"
+    right: "6px"
+    bottom: "6px"
+    left: "6px"
+
+
+window_effects:
+  focused_window:
+    border:
+      enabled: false
+      color: "#A9ABC0"
+
+    hide_title_bar:
+      enabled: true
+
+    corner_style:
+      enabled: false
+      style: "square"
+
+    transparency:
+      enabled: false
+      opacity: "100%"
+
+  other_windows:
+    border:
+      enabled: false
+      color: "#314D6B"
+
+    hide_title_bar:
+      enabled: true
+
+    corner_style:
+      enabled: false
+      style: "square"
+
+    transparency:
+      enabled: false
+      opacity: "100%"
+
+
+window_behavior:
+  initial_state: "tiling"
+
+  state_defaults:
+    floating:
+      centered: true
+      shown_on_top: false
+
+    fullscreen:
+      maximized: false
+      shown_on_top: false
+
+
+workspaces:
+  - name: "MAIN"
+  - name: "CODE"
+  - name: "ROBLOX"
+  - name: "LAIN"
+  - name: "MEDIA"
+  - name: "6"
+  - name: "7"
+  - name: "8"
+  - name: "9"
+
+
+
+window_rules:
+  - commands: ["move --workspace CODE"]
+    match:
+      - window_process: { equals: "devenv" }
+  - commands: ["move --workspace CODE"]
+    match:
+      - window_process: { equals: "Code" }
+
+  - commands: ["move --workspace ROBLOX"]
+    match:
+      - window_process: { equals: "RobloxStudioBeta" }
+  - commands: ["move --workspace MAIN"]
+    match:
+      - window_process: { equals: "chrome" }
+
+
+binding_modes:
+
+  - name: "resize"
+
+    keybindings:
+
+      - commands: ["resize --width -2%"]
+        bindings: ["h", "left"]
+
+      - commands: ["resize --width +2%"]
+        bindings: ["l", "right"]
+
+      - commands: ["resize --height +2%"]
+        bindings: ["k", "up"]
+
+      - commands: ["resize --height -2%"]
+        bindings: ["j", "down"]
+
+      - commands: ["wm-disable-binding-mode --name resize"]
+        bindings: ["escape", "enter"]
+
+
+keybindings:
+
+  # -------------------------
+  # FOCUS
+  # -------------------------
+
+  - commands: ["focus --direction left"]
+    bindings: ["alt+h", "alt+left"]
+
+  - commands: ["focus --direction right"]
+    bindings: ["alt+l", "alt+right"]
+
+  - commands: ["focus --direction up"]
+    bindings: ["alt+k", "alt+up"]
+
+  - commands: ["focus --direction down"]
+    bindings: ["alt+j", "alt+down"]
+
+
+  # -------------------------
+  # MOVE
+  # -------------------------
+
+  - commands: ["move --direction left"]
+    bindings: ["alt+shift+h", "alt+shift+left"]
+
+  - commands: ["move --direction right"]
+    bindings: ["alt+shift+l", "alt+shift+right"]
+
+  - commands: ["move --direction up"]
+    bindings: ["alt+shift+k", "alt+shift+up"]
+
+  - commands: ["move --direction down"]
+    bindings: ["alt+shift+j", "alt+shift+down"]
+
+
+  # -------------------------
+  # RESIZE
+  # -------------------------
+
+  - commands: ["wm-enable-binding-mode --name resize"]
+    bindings: ["alt+r"]
+
+
+  # -------------------------
+  # TILING
+  # -------------------------
+
+  - commands: ["toggle-tiling-direction"]
+    bindings: ["alt+v"]
+
+  - commands: ["toggle-floating --centered"]
+    bindings: ["alt+shift+space"]
+
+  - commands: ["toggle-tiling"]
+    bindings: ["alt+t"]
+
+  - commands: ["toggle-fullscreen"]
+    bindings: ["alt+f"]
+
+  - commands: ["toggle-minimized"]
+    bindings: ["alt+m"]
+
+  - commands: ["wm-cycle-focus"]
+    bindings: ["alt+space"]
+
+
+  # -------------------------
+  # WORKSPACES
+  # -------------------------
+
+  - commands: ["focus --workspace MAIN"]
+    bindings: ["alt+1"]
+
+  - commands: ["focus --workspace CODE"]
+    bindings: ["alt+2"]
+
+  - commands: ["focus --workspace ROBLOX"]
+    bindings: ["alt+3"]
+
+  - commands: ["focus --workspace LAIN"]
+    bindings: ["alt+4"]
+
+  - commands: ["focus --workspace MEDIA"]
+    bindings: ["alt+5"]
+
+  - commands: ["focus --workspace 6"]
+    bindings: ["alt+6"]
+
+  - commands: ["focus --workspace 7"]
+    bindings: ["alt+7"]
+
+  - commands: ["focus --workspace 8"]
+    bindings: ["alt+8"]
+
+  - commands: ["focus --workspace 9"]
+    bindings: ["alt+9"]
+
+
+  # -------------------------
+  # MOVE TO WORKSPACE
+  # -------------------------
+
+  - commands: ["move --workspace MAIN"]
+    bindings: ["alt+shift+1"]
+
+  - commands: ["move --workspace CODE"]
+    bindings: ["alt+shift+2"]
+
+  - commands: ["move --workspace ROBLOX"]
+    bindings: ["alt+shift+3"]
+
+  - commands: ["move --workspace LAIN"]
+    bindings: ["alt+shift+4"]
+
+  - commands: ["move --workspace MEDIA"]
+    bindings: ["alt+shift+5"]
+
+  - commands: ["move --workspace 6"]
+    bindings: ["alt+shift+6"]
+
+  - commands: ["move --workspace 7"]
+    bindings: ["alt+shift+7"]
+
+  - commands: ["move --workspace 8"]
+    bindings: ["alt+shift+8"]
+
+  - commands: ["move --workspace 9"]
+    bindings: ["alt+shift+9"]
+
+
+  # -------------------------
+  # WORKSPACE SWITCHING
+  # -------------------------
+
+  - commands: ["focus --next-active-workspace"]
+    bindings: ["alt+s"]
+
+  - commands: ["focus --prev-active-workspace"]
+    bindings: ["alt+a"]
+
+  - commands: ["focus --recent-workspace"]
+    bindings: ["alt+d"]
+
+
+  # -------------------------
+  # TERMINAL
+  # -------------------------
+
+  - commands: ["shell-exec wt"]
+    bindings: ["alt+enter"]
+
+
+  # -------------------------
+  # WM
+  # -------------------------
+
+  - commands: ["wm-toggle-pause"]
+    bindings: ["alt+shift+p"]
+
+  - commands: ["wm-reload-config"]
+    bindings: ["alt+shift+r"]
+
+  - commands: ["wm-redraw"]
+    bindings: ["alt+shift+w"]
+
+  - commands: ["wm-exit"]
+    bindings: ["alt+shift+e"]
+
+  - commands: ["close"]
+    bindings: ["alt+shift+q"]
+
+
+
+
+
+
+

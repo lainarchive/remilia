@@ -1,0 +1,592 @@
+{
+  "Hotkey": "LWin",
+  "OpenResultModifiers": "Alt",
+  "ColorScheme": "Dark",
+  "ShowOpenResultHotkey": true,
+  "WindowSize": 580,
+  "PreviewHotkey": "F1",
+  "AutoCompleteHotkey": "Ctrl \u002B Tab",
+  "AutoCompleteHotkey2": "",
+  "SelectNextItemHotkey": "Tab",
+  "SelectNextItemHotkey2": "",
+  "SelectPrevItemHotkey": "Shift \u002B Tab",
+  "SelectPrevItemHotkey2": "",
+  "SelectNextPageHotkey": "PageUp",
+  "SelectPrevPageHotkey": "PageDown",
+  "OpenContextMenuHotkey": "Ctrl\u002BO",
+  "SettingWindowHotkey": "Ctrl\u002BI",
+  "OpenHistoryHotkey": "Ctrl\u002BH",
+  "CycleHistoryUpHotkey": "Alt \u002B Up",
+  "CycleHistoryDownHotkey": "Alt \u002B Down",
+  "DialogJumpHotkey": "Alt \u002B G",
+  "Language": "system",
+  "Theme": "Your Lie in April",
+  "UseDropShadowEffect": true,
+  "BackdropType": 1,
+  "ReleaseNotesVersion": "2.1.3",
+  "WindowHeightSize": 42,
+  "ItemHeightSize": 58,
+  "QueryBoxFontSize": 16,
+  "ResultItemFontSize": 16,
+  "ResultSubItemFontSize": 13,
+  "QueryBoxFont": "Segoe UI",
+  "QueryBoxFontStyle": null,
+  "QueryBoxFontWeight": null,
+  "QueryBoxFontStretch": null,
+  "ResultFont": "Segoe UI",
+  "ResultFontStyle": null,
+  "ResultFontWeight": null,
+  "ResultFontStretch": null,
+  "ResultSubFont": "Segoe UI",
+  "ResultSubFontStyle": null,
+  "ResultSubFontWeight": null,
+  "ResultSubFontStretch": null,
+  "UseGlyphIcons": true,
+  "UseAnimation": true,
+  "UseSound": true,
+  "SoundVolume": 50,
+  "ShowBadges": false,
+  "ShowBadgesGlobalOnly": false,
+  "SettingWindowFont": "Segoe UI",
+  "UseClock": true,
+  "UseDate": false,
+  "TimeFormat": "hh:mm tt",
+  "DateFormat": "MM\u0027/\u0027dd ddd",
+  "FirstLaunch": false,
+  "SettingWindowWidth": 1912,
+  "SettingWindowHeight": 963,
+  "SettingWindowTop": 113,
+  "SettingWindowLeft": 4,
+  "SettingWindowState": 0,
+  "ShowPlaceholder": true,
+  "PlaceholderText": "",
+  "ShowHomePage": true,
+  "ShowHistoryResultsForHomePage": false,
+  "MaxHistoryResultsToShowForHomePage": 5,
+  "AutoRestartAfterChanging": false,
+  "ShowUnknownSourceWarning": true,
+  "AutoUpdatePlugins": true,
+  "CustomExplorerIndex": 0,
+  "CustomExplorerList": [
+    {
+      "Name": "Explorer",
+      "Path": "explorer",
+      "FileArgument": "/select, \u0022%f\u0022",
+      "DirectoryArgument": "\u0022%d\u0022",
+      "Editable": false
+    },
+    {
+      "Name": "Total Commander",
+      "Path": "C:\\Program Files\\totalcmd\\TOTALCMD64.exe",
+      "FileArgument": "/O /A /S /T \u0022%f\u0022",
+      "DirectoryArgument": "/O /A /S /T \u0022%d\u0022",
+      "Editable": true
+    },
+    {
+      "Name": "Directory Opus",
+      "Path": "C:\\Program Files\\GPSoftware\\Directory Opus\\dopusrt.exe",
+      "FileArgument": "/cmd Go \u0022%f\u0022 NEW",
+      "DirectoryArgument": "/cmd Go \u0022%d\u0022 NEW",
+      "Editable": true
+    },
+    {
+      "Name": "Files",
+      "Path": "Files-Stable",
+      "FileArgument": "-select \u0022%f\u0022",
+      "DirectoryArgument": "\u0022%d\u0022",
+      "Editable": true
+    }
+  ],
+  "CustomBrowserIndex": 0,
+  "CustomBrowserList": [
+    {
+      "Name": "Default",
+      "Path": "*",
+      "PrivateArg": "",
+      "EnablePrivate": false,
+      "OpenInTab": true,
+      "Editable": false
+    },
+    {
+      "Name": "Google Chrome",
+      "Path": "chrome",
+      "PrivateArg": "-incognito",
+      "EnablePrivate": false,
+      "OpenInTab": true,
+      "Editable": false
+    },
+    {
+      "Name": "Mozilla Firefox",
+      "Path": "firefox",
+      "PrivateArg": "-private",
+      "EnablePrivate": false,
+      "OpenInTab": true,
+      "Editable": false
+    },
+    {
+      "Name": "MS Edge",
+      "Path": "msedge",
+      "PrivateArg": "-inPrivate",
+      "EnablePrivate": false,
+      "OpenInTab": true,
+      "Editable": false
+    }
+  ],
+  "EnableDialogJump": true,
+  "AutoDialogJump": false,
+  "ShowDialogJumpWindow": false,
+  "DialogJumpWindowPosition": "UnderDialog",
+  "DialogJumpResultBehaviour": "LeftClick",
+  "DialogJumpFileResultBehaviour": "FullPath",
+  "LogLevel": "INFO",
+  "ShouldUsePinyin": false,
+  "UseDoublePinyin": false,
+  "DoublePinyinSchema": "XiaoHe",
+  "AlwaysPreview": false,
+  "AlwaysStartEn": false,
+  "QuerySearchPrecision": "Regular",
+  "AutoUpdates": false,
+  "WindowLeft": 670,
+  "WindowTop": 293,
+  "PreviousScreenWidth": 0,
+  "PreviousScreenHeight": 0,
+  "PreviousDpiX": 0,
+  "PreviousDpiY": 0,
+  "CustomWindowLeft": 0,
+  "CustomWindowTop": 0,
+  "KeepMaxResults": false,
+  "MaxResultsToShow": 5,
+  "ActivateTimes": 451,
+  "CustomPluginHotkeys": [],
+  "CustomShortcuts": [],
+  "DontPromptUpdateMsg": false,
+  "EnableUpdateLog": false,
+  "StartFlowLauncherOnSystemStartup": false,
+  "UseLogonTaskForStartup": false,
+  "HideOnStartup": true,
+  "HideNotifyIcon": false,
+  "LeaveCmdOpen": false,
+  "HideWhenDeactivated": true,
+  "ShowTaskbarWhenInvoked": false,
+  "ShowAtTopmost": false,
+  "SearchQueryResultsWithDelay": false,
+  "SearchDelayTime": 150,
+  "SearchWindowScreen": "Cursor",
+  "SearchWindowAlign": "Center",
+  "CustomScreenNumber": 1,
+  "IgnoreHotkeysOnFullscreen": false,
+  "Proxy": {
+    "Enabled": false,
+    "Server": null,
+    "Port": 0,
+    "UserName": null,
+    "Password": null
+  },
+  "LastQueryMode": "Selected",
+  "AnimationSpeed": "Medium",
+  "CustomAnimationLength": 360,
+  "PluginSettings": {
+    "PythonExecutablePath": "C:\\Users\\User\\AppData\\Roaming\\FlowLauncher\\Environments\\Python\\PythonEmbeddable-v3.11.4\\pythonw.exe",
+    "NodeExecutablePath": "",
+    "Plugins": {
+      "0ECADE17459B49F587BF81DC3A125110": {
+        "ID": "0ECADE17459B49F587BF81DC3A125110",
+        "Name": "Browser Bookmarks",
+        "Version": "2.1.3",
+        "ActionKeywords": [
+          "b"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "CEA0FDFC6D3B4085823D60DC76F28855": {
+        "ID": "CEA0FDFC6D3B4085823D60DC76F28855",
+        "Name": "Calculator",
+        "Version": "2.1.3",
+        "ActionKeywords": [
+          "*"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "572be03c74c642baae319fc283e561a8": {
+        "ID": "572be03c74c642baae319fc283e561a8",
+        "Name": "Explorer",
+        "Version": "2.1.3",
+        "ActionKeywords": [
+          "*",
+          "doc:",
+          "*",
+          "*",
+          "*"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "6A122269676E40EB86EB543B945932B9": {
+        "ID": "6A122269676E40EB86EB543B945932B9",
+        "Name": "Plugin Indicator",
+        "Version": "2.1.3",
+        "ActionKeywords": [
+          "?"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "9f8f9b14-2518-4907-b211-35ab6290dee7": {
+        "ID": "9f8f9b14-2518-4907-b211-35ab6290dee7",
+        "Name": "Plugins Manager",
+        "Version": "2.1.3",
+        "ActionKeywords": [
+          "pm"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "b64d0a79-329a-48b0-b53f-d658318a1bf6": {
+        "ID": "b64d0a79-329a-48b0-b53f-d658318a1bf6",
+        "Name": "Process Killer",
+        "Version": "2.1.3",
+        "ActionKeywords": [
+          "kill"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "791FC278BA414111B8D1886DFE447410": {
+        "ID": "791FC278BA414111B8D1886DFE447410",
+        "Name": "Program",
+        "Version": "2.1.3",
+        "ActionKeywords": [
+          "*"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "D409510CD0D2481F853690A07E6DC426": {
+        "ID": "D409510CD0D2481F853690A07E6DC426",
+        "Name": "Shell",
+        "Version": "2.1.3",
+        "ActionKeywords": [
+          "\u003E"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "CEA08895D2544B019B2E9C5009600DF4": {
+        "ID": "CEA08895D2544B019B2E9C5009600DF4",
+        "Name": "System Commands",
+        "Version": "2.1.3",
+        "ActionKeywords": [
+          "*"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "0308FD86DE0A4DEE8D62B9B535370992": {
+        "ID": "0308FD86DE0A4DEE8D62B9B535370992",
+        "Name": "URL",
+        "Version": "2.1.3",
+        "ActionKeywords": [
+          "*"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "565B73353DBF4806919830B9202EE3BF": {
+        "ID": "565B73353DBF4806919830B9202EE3BF",
+        "Name": "Web Searches",
+        "Version": "2.1.3",
+        "ActionKeywords": [
+          "*",
+          "sc",
+          "wiki",
+          "findicon",
+          "facebook",
+          "twitter",
+          "maps",
+          "translate",
+          "duckduckgo",
+          "github",
+          "gist",
+          "gmail",
+          "drive",
+          "wolframalpha",
+          "stackoverflow",
+          "lucky",
+          "image",
+          "youtube",
+          "bing",
+          "yahoo",
+          "bd"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": 450,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "5043CETYU6A748679OPA02D27D99677A": {
+        "ID": "5043CETYU6A748679OPA02D27D99677A",
+        "Name": "Windows Settings",
+        "Version": "2.1.3",
+        "ActionKeywords": [
+          "s"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "997C1625F44C4AF09C0E495F35E2712A": {
+        "ID": "997C1625F44C4AF09C0E495F35E2712A",
+        "Name": "App Audio Manager",
+        "Version": "1.1.1",
+        "ActionKeywords": [
+          "am"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "10A62E71-37A5-4978-95A7-4D3F7FBD5885": {
+        "ID": "10A62E71-37A5-4978-95A7-4D3F7FBD5885",
+        "Name": "Browser Tabs",
+        "Version": "1.1.1",
+        "ActionKeywords": [
+          "t"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "A3EA904783E14335894354F09DC4B054": {
+        "ID": "A3EA904783E14335894354F09DC4B054",
+        "Name": "CdList",
+        "Version": "1.3.0",
+        "ActionKeywords": [
+          "cd"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "6920034425C14101A0F90335130AE3CE": {
+        "ID": "6920034425C14101A0F90335130AE3CE",
+        "Name": "ChatGPT",
+        "Version": "1.0.0",
+        "ActionKeywords": [
+          "ai"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "ff9385ec-0e95-452f-bef2-62456f66fe0f": {
+        "ID": "ff9385ec-0e95-452f-bef2-62456f66fe0f",
+        "Name": "Clipboard\u002B",
+        "Version": "3.1.2",
+        "ActionKeywords": [
+          "cbp"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "B4A91730C08342818D31D57EC31CBFD8": {
+        "ID": "B4A91730C08342818D31D57EC31CBFD8",
+        "Name": "Daily Folder",
+        "Version": "1.0.2",
+        "ActionKeywords": [
+          "df"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "D0DB38F5-0199-4DFC-8A8D-1B22F68C157C": {
+        "ID": "D0DB38F5-0199-4DFC-8A8D-1B22F68C157C",
+        "Name": "Favorites",
+        "Version": "1.5.0",
+        "ActionKeywords": [
+          "*"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "6CD987FE4D5E43438EE51C43D0961F89": {
+        "ID": "6CD987FE4D5E43438EE51C43D0961F89",
+        "Name": "FlowRichPresence",
+        "Version": "1.0.1",
+        "ActionKeywords": [
+          "frp"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "42DE0794627A48B2847E6FDF29DD5561": {
+        "ID": "42DE0794627A48B2847E6FDF29DD5561",
+        "Name": "FlowYouTube",
+        "Version": "2.1.0",
+        "ActionKeywords": [
+          "yt"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "F0DC45CD032F438C9B900679BD9B117A": {
+        "ID": "F0DC45CD032F438C9B900679BD9B117A",
+        "Name": "Obsidian Notes",
+        "Version": "1.1.4",
+        "ActionKeywords": [
+          "ob"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "eda56b23-b5c5-48d9-be0d-05ccb907c86d": {
+        "ID": "eda56b23-b5c5-48d9-be0d-05ccb907c86d",
+        "Name": "Pokedex",
+        "Version": "2.0.2",
+        "ActionKeywords": [
+          "pk"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "F8A3B1D4E6C2947F5A0B8D3E1C6F2A74": {
+        "ID": "F8A3B1D4E6C2947F5A0B8D3E1C6F2A74",
+        "Name": "QuickTodo",
+        "Version": "1.5.0",
+        "ActionKeywords": [
+          "td",
+          "tdo",
+          "os"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "968c2551-5b24-4bab-9a6c-5f8cff6ca0ef": {
+        "ID": "968c2551-5b24-4bab-9a6c-5f8cff6ca0ef",
+        "Name": "Roblox Docs",
+        "Version": "1.1.0",
+        "ActionKeywords": [
+          "rbx"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "D8A705AD7AB849ACB581FF46D3B59816": {
+        "ID": "D8A705AD7AB849ACB581FF46D3B59816",
+        "Name": "Scoop",
+        "Version": "1.0.2",
+        "ActionKeywords": [
+          "scoop"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "8E3F7A21-9B2C-4D5E-A1F8-3C2B7D9E5A4B": {
+        "ID": "8E3F7A21-9B2C-4D5E-A1F8-3C2B7D9E5A4B",
+        "Name": "Steam Launcher",
+        "Version": "1.2.0",
+        "ActionKeywords": [
+          "st"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "477F16413D374364A4D5D36DCE68ED45": {
+        "ID": "477F16413D374364A4D5D36DCE68ED45",
+        "Name": "Twitchy",
+        "Version": "7.0.0",
+        "ActionKeywords": [
+          "tw"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "CBDFA9CF044842B4A79939112240FD38": {
+        "ID": "CBDFA9CF044842B4A79939112240FD38",
+        "Name": "Visual Studio Launcher",
+        "Version": "1.1.1",
+        "ActionKeywords": [
+          "["
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "a56ae6ac-7b3b-47b9-857f-05ff25d29510": {
+        "ID": "a56ae6ac-7b3b-47b9-857f-05ff25d29510",
+        "Name": "Windows Terminal profiles",
+        "Version": "0.0.10",
+        "ActionKeywords": [
+          "wt"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "7D530704C68E4838896BBA5C4C1DE7DF": {
+        "ID": "7D530704C68E4838896BBA5C4C1DE7DF",
+        "Name": "Win Hotkey",
+        "Version": "4.0.0",
+        "ActionKeywords": [
+          "*"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      }
+    }
+  }
+}

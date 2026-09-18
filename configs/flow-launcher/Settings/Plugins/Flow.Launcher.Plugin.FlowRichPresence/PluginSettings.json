@@ -1,0 +1,35 @@
+{
+  "Profiles": [
+    {
+      "ClientID": "",
+      "Title": "New Profile",
+      "Presence": {
+        "Buttons": [
+          null,
+          null
+        ],
+        "State": "Flow RPC",
+        "Details": "Created and Running from flow launcher",
+        "Timestamps": null,
+        "Assets": {
+          "LargeImageKey": "https://t2.gstatic.com/faviconV2?client=SOCIAL\u0026type=FAVICON\u0026fallback_opts=TYPE,SIZE,URL\u0026url=http://flowlauncher.com\u0026size=128",
+          "IsLargeImageKeyExternal": false,
+          "LargeImageText": "Flow RPC",
+          "SmallImageKey": "https://t2.gstatic.com/faviconV2?client=SOCIAL\u0026type=FAVICON\u0026fallback_opts=TYPE,SIZE,URL\u0026url=http://flowlauncher.com\u0026size=128",
+          "IsSmallImageKeyExternal": false,
+          "SmallImageText": "Flow RPC",
+          "LargeImageID": null,
+          "SmallImageID": null
+        },
+        "Party": {
+          "ID": "/;RsL)M\uFFFDuf\u0000K\u0000\uFFFD\uFFFD\n\u0000E\uFFFD\tX\uFFFD\uFFFDjXg\f\uFFFD\u0016\uFFFD\uFFFDaJ\u000E\u001CV!\uFFFD\uFFFDz~\uFFFDP\uFFFD$ll%\uFFFD%\uFFFD\uFFFDjr\uFFFDf\uFFFD\uFFFD\uFFFD-\uFFFD\uFFFD\u0011\uFFFD\uFFFDon\uFFFD\uFFFD!\uFFFD\uFFFDe\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDj\u0012\uFFFD\uFFFD\u013D\uFFFD\f\u0007\uFFFDp\uFFFD~\uFFFD\u0014C\uFFFD\uFFFD\uFFFD\uFFFDf{sG\u0015\uFFFD\uFFFD,\u0005\uFFFDo\uFFFD\uFFFD\uFFFDI\uFFFD\uFFFD\uFFFDB\uFFFD\uFFFDr\uFFFD-\uFFFD\u0010\uFFFD",
+          "Size": 1,
+          "Max": 12,
+          "Privacy": 0
+        },
+        "Secrets": null
+      }
+    }
+  ],
+  "UseExternalImageUrl": false
+}
