@@ -3,13 +3,12 @@
 
 $RemiliaRoot = Join-Path $env:USERPROFILE 'remilia'
 $FastfetchConfig = Join-Path $RemiliaRoot 'configs\fastfetch\config.jsonc'
-$FastfetchLogo = Join-Path $RemiliaRoot 'configs\fastfetch\scarlet.six'
 $OhMyPoshTheme = Join-Path $RemiliaRoot 'configs\oh-my-posh\remilia.omp.json'
 
 # Fastfetch
 if ((Get-Command fastfetch -ErrorAction SilentlyContinue) -and
     (Test-Path -LiteralPath $FastfetchConfig)) {
-    fastfetch --config $FastfetchConfig --sixel $FastfetchLogo --logo-width 25 --logo-height 19 --pipe false
+    fastfetch --config $FastfetchConfig --pipe false
 }
 
 # Oh My Posh
