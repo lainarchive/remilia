@@ -75,57 +75,45 @@
     padding: 6px;
 }
 
-.home-widget .label {
-    font-family: "GoMono Nerd Font";
-    padding: 0 8px;
-    margin-right: -8px;
-}
-
-.home-menu {
-    background-color: var(--bg2);
-    margin-left: 6px;
-}
-
-.home-menu .menu-item {
-    padding: 8px 10px 10px 8px;
-    font-size: 12px;
-    font-family: "GoMono Nerd Font";
-    margin-left: 6px;
-}
-
-.home-menu .menu-item:hover {
-    background-color: var(--wine);
-    color: var(--text);
-}
-
-/* Touhou character-sigil rail */
+/* Touhou character rail */
 .touhou-widget {
     margin-left: 2px;
-    margin-right: 5px;
+    margin-right: 7px;
     background-color: transparent;
 }
 
-.touhou-widget .label {
-    font-size: 14px;
-    letter-spacing: 2px;
-    padding: 0 4px;
-    color: var(--dim);
+.touhou-widget .widget-container {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
 }
 
-.touhou-widget .label:hover {
+.touhou-widget .app-button,
+.touhou-widget .button {
+    background-color: transparent;
+    border: 0;
+    border-radius: 7px;
+    padding: 1px 2px;
+    margin: 0 1px;
+}
+
+.touhou-widget .app-button:hover,
+.touhou-widget .button:hover {
     background-color: var(--bg3);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    color: var(--text);
-    padding-left: 7px;
-    padding-right: 7px;
+    border: 1px solid var(--border2);
 }
 
-.touhou-widget .reimu { color: #c05a78; }
-.touhou-widget .marisa { color: #e8dedf; }
-.touhou-widget .cirno { color: #9a3b59; }
-.touhou-widget .sakuya { color: #b6a0aa; }
-.touhou-widget .remilia { color: #c05a78; }
+.touhou-widget .app-button:pressed,
+.touhou-widget .button:pressed {
+    background-color: var(--wine);
+}
+
+.touhou-widget img,
+.touhou-widget .icon {
+    margin: 0 2px;
+    padding: 0;
+}
 
 .glazewm-tiling-direction {
     background-color: transparent;
