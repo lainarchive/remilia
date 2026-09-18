@@ -1,0 +1,13 @@
+# local machine data
+*.bak
+*.tmp
+*.log
+
+# secrets
+.env
+*.pem
+*.key
+
+# generated/local environments
+.venv/
+node_modules/
