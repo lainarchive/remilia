@@ -75,10 +75,9 @@
     padding: 6px;
 }
 
-/* Touhou character rail */
 .touhou-widget {
     margin-left: 2px;
-    margin-right: 5px;
+    margin-right: 6px;
     background-color: transparent;
 }
 
@@ -87,26 +86,24 @@
     border: 0;
     padding: 0;
     margin: 0;
+    spacing: 0;
 }
 
-.touhou-widget .label {
+.touhou-widget .widget-container .label {
     background-color: transparent;
     border: 0;
-    border-radius: 6px;
-    padding: 0;
-    margin: 0 2px;
-    min-width: 17px;
-    min-height: 17px;
+    padding: 1px;
+    margin: 0 1px;
+    min-width: 20px;
+    min-height: 20px;
 }
 
-.touhou-widget .label:hover {
+.touhou-widget .widget-container .label:hover {
     background-color: var(--bg3);
     border: 1px solid var(--border2);
+    border-radius: 5px;
 }
 
-.touhou-widget .label:pressed {
-    background-color: var(--wine);
-}
 
 .glazewm-tiling-direction {
     background-color: transparent;
@@ -606,6 +603,29 @@
 .custom-widget .widget-container .label {
     padding: 0 8px;
     margin-right: -10px;
+}
+
+.apps-widget {
+    background-color: transparent;
+}
+
+.apps-widget .widget-container {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.apps-widget .widget-container .label {
+    background-color: transparent;
+    border: 0;
+    padding: 1px;
+    margin: 0 1px;
+}
+
+.apps-widget .widget-container .label:hover {
+    background-color: var(--bg3);
+    border: 1px solid var(--border2);
+    border-radius: 5px;
 }
 
 .system-widget .label {
