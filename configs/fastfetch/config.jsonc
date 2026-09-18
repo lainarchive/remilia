@@ -1,9 +1,9 @@
 {
-  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
 
   "logo": {
     "type": "raw",
-    "source": "%FASTFETCH_EAGLE_ROOT%/manga.six",
+    "source": "%FASTFETCH_REPO_ROOT%/manga.six",
     "width": 25,
     "height": 19,
     "padding": {
@@ -15,47 +15,47 @@
   },
 
   "display": {
-    "separator": " ",
+    "separator": "  ",
     "color": {
-      "keys": "#8BD49C",
-      "title": "#9BE5D8",
-      "output": "#D8DEE9",
-      "separator": "#525A6B"
+      "keys": "#C05A78",
+      "title": "#F1E8EA",
+      "output": "#E8DEDF",
+      "separator": "#4A1D2B"
     },
     "key": {
-      "width": 15
+      "width": 12
     },
     "bar": {
-      "width": 13,
+      "width": 10,
       "char": {
-        "elapsed": "■",
-        "total": "·"
+        "elapsed": "━",
+        "total": "─"
       },
       "border": {
-        "left": "[",
-        "right": "]"
+        "left": "⟦",
+        "right": "⟧"
       },
       "color": {
-        "elapsed": "#8BD49C",
-        "total": "#454D5D",
-        "border": "#626B7D"
+        "elapsed": "#9A3B59",
+        "total": "#351722",
+        "border": "#6F263F"
       }
     },
     "percent": {
       "type": ["num"],
       "color": {
-        "green": "#8BD49C",
-        "yellow": "#E7C787",
-        "red": "#E58C9B"
+        "green": "#BFA0AD",
+        "yellow": "#D7B07B",
+        "red": "#C05A78"
       }
     },
     "temp": {
       "green": 60,
       "yellow": 80,
       "color": {
-        "green": "#8BD49C",
-        "yellow": "#E7C787",
-        "red": "#E58C9B"
+        "green": "#BFA0AD",
+        "yellow": "#D7B07B",
+        "red": "#C05A78"
       }
     }
   },
@@ -64,183 +64,127 @@
     {
       "type": "title",
       "key": " ",
-      "format": "{##D8DEE9}Hey, {##9BE5D8}{user-name}{#}"
+      "format": "{##F1E8EA}{user-name}{##9A3B59}@{##F1E8EA}{host-name}{#}"
     },
+
+    {
+      "type": "custom",
+      "format": "{##4A1D2B}╭─────────────── {##C05A78}SYSTEM {##4A1D2B}───────────────╮{#}"
+    },
+    {
+      "type": "os",
+      "key": "OS",
+      "keyColor": "#C05A78",
+      "format": "{pretty-name} [{arch}]"
+    },
+    {
+      "type": "wm",
+      "key": "WM",
+      "keyColor": "#C05A78",
+      "format": "{pretty-name} {version}"
+    },
+    {
+      "type": "shell",
+      "key": "SHELL",
+      "keyColor": "#C05A78",
+      "format": "{pretty-name} {version}"
+    },
+    {
+      "type": "terminal",
+      "key": "TERM",
+      "keyColor": "#C05A78",
+      "format": "{pretty-name} {version}"
+    },
+    {
+      "type": "custom",
+      "format": "{##4A1D2B}╰────────────────────────────────────╯{#}"
+    },
+
     "break",
 
     {
       "type": "custom",
-      "format": "{##525A6B}┌────────────────{##8BD49C} Hardware {##525A6B}────────────────┐{#}"
-    },
-    {
-      "type": "host",
-      "key": "├─ PC",
-      "keyColor": "#8BD49C",
-      "format": "{name} // {version}"
+      "format": "{##4A1D2B}╭────────────── {##C05A78}HARDWARE {##4A1D2B}──────────────╮{#}"
     },
     {
       "type": "cpu",
-      "key": "├─ CPU",
-      "keyColor": "#8BD49C",
+      "key": "CPU",
+      "keyColor": "#C05A78",
       "temp": true,
-      "format": "{name} ({cores-physical}C / {cores-logical}T){?freq-max} @ {freq-max}{?}{?temperature} // {temperature}{?}"
+      "format": "{name} • {cores-physical}C/{cores-logical}T{?temperature} • {temperature}{?}"
     },
     {
       "type": "gpu",
-      "key": "├─ GPU",
-      "keyColor": "#8BD49C",
+      "key": "GPU",
+      "keyColor": "#C05A78",
       "temp": true,
-      "format": "{name} [{type}] {?dedicated-total}// {dedicated-total}{?} {?temperature}// {temperature}{?}"
+      "format": "{name}{?temperature} • {temperature}{?}"
     },
     {
       "type": "memory",
-      "key": "├─ RAM",
-      "keyColor": "#8BD49C",
-      "format": "{used} / {total} {percentage-bar} {percentage}",
-      "percent": {
-        "type": ["bar", "num"]
-      }
-    },
-    {
-      "type": "swap",
-      "key": "├─ SWAP",
-      "keyColor": "#8BD49C",
-      "format": "{used} / {total} {percentage-bar} {percentage}",
+      "key": "RAM",
+      "keyColor": "#C05A78",
+      "format": "{used} / {total}  {percentage-bar} {percentage}",
       "percent": {
         "type": ["bar", "num"]
       }
     },
     {
       "type": "disk",
-      "key": "├─ DRIVE",
-      "keyColor": "#8BD49C",
-      "format": "{mountpoint} {size-used} / {size-total} {size-percentage-bar} {size-percentage}",
+      "key": "DISK",
+      "keyColor": "#C05A78",
+      "format": "{mountpoint} • {size-used} / {size-total}  {size-percentage-bar} {size-percentage}",
       "percent": {
         "type": ["bar", "num"]
       }
     },
     {
       "type": "display",
-      "key": "├─ DISPLAY",
-      "keyColor": "#8BD49C",
-      "format": "{width}x{height} @ {refresh-rate} Hz [{type}]"
-    },
-    {
-      "type": "battery",
-      "key": "└─ BATTERY",
-      "keyColor": "#8BD49C",
-      "format": "{capacity} // {status} {?time-formatted}// {time-formatted}{?}"
+      "key": "DISPLAY",
+      "keyColor": "#C05A78",
+      "format": "{width}x{height} @ {refresh-rate}Hz"
     },
     {
       "type": "custom",
-      "format": "{##525A6B}└──────────────────────────────────────────┘{#}"
+      "format": "{##4A1D2B}╰────────────────────────────────────╯{#}"
     },
+
     "break",
 
     {
       "type": "custom",
-      "format": "{##525A6B}┌────────────────{##E7C787} Software {##525A6B}────────────────┐{#}"
+      "format": "{##4A1D2B}╭────────────── {##C05A78}SESSION {##4A1D2B}──────────────╮{#}"
     },
     {
-      "type": "os",
-      "key": "├─ OS",
-      "keyColor": "#E7C787",
-      "format": "{pretty-name} [{arch}]"
+      "type": "uptime",
+      "key": "UP",
+      "keyColor": "#C05A78",
+      "format": "{formatted}"
     },
     {
-      "type": "wm",
-      "key": "├─ WM",
-      "keyColor": "#E7C787",
-      "format": "{pretty-name} {version}"
-    },
-    {
-      "type": "shell",
-      "key": "├─ SHELL",
-      "keyColor": "#E7C787",
-      "format": "{pretty-name} {version}"
-    },
-    {
-      "type": "terminal",
-      "key": "├─ TERMINAL",
-      "keyColor": "#E7C787",
-      "format": "{pretty-name} {version}"
-    },
-    {
-      "type": "packages",
-      "key": "├─ PACKAGES",
-      "keyColor": "#E7C787",
-      "format": "{?choco}{choco} choco · {?}{?scoop-user}{scoop-user} scoop{?}"
-    },
-    {
-      "type": "locale",
-      "key": "└─ LOCALE",
-      "keyColor": "#E7C787",
-      "format": "{result}"
-    },
-    {
-      "type": "custom",
-      "format": "{##525A6B}└──────────────────────────────────────────┘{#}"
-    },
-    "break",
-
-    {
-      "type": "custom",
-      "format": "{##525A6B}┌─────────────────{##7DA6D8} Session {##525A6B}────────────────┐{#}"
-    },
-    {
-      "type": "users",
-      "key": "├─ LOGIN",
-      "keyColor": "#7DA6D8",
-      "format": "{name} // {login-time}",
-      "myselfOnly": true
+      "type": "datetime",
+      "key": "DATE",
+      "keyColor": "#C05A78",
+      "format": "{year}-{month-pretty}-{day-pretty} {hour-pretty}:{minute-pretty}"
     },
     {
       "type": "sound",
-      "key": "├─ AUDIO",
-      "keyColor": "#7DA6D8",
+      "key": "AUDIO",
+      "keyColor": "#C05A78",
       "format": "{name}"
     },
     {
       "type": "localip",
-      "key": "└─ LOCAL IP",
-      "keyColor": "#7DA6D8",
-      "format": "{ipv4} // {ifname}",
+      "key": "LAN",
+      "keyColor": "#C05A78",
+      "format": "{ipv4} • {ifname}",
       "showIpv4": true,
       "showIpv6": false,
       "showLoop": false
     },
     {
       "type": "custom",
-      "format": "{##525A6B}└──────────────────────────────────────────┘{#}"
-    },
-    "break",
-
-    {
-      "type": "custom",
-      "format": "{##525A6B}┌──────────────{##D7A0C9} Uptime / Date {##525A6B}──────────────┐{#}"
-    },
-    {
-      "type": "uptime",
-      "key": "├─ UPTIME",
-      "keyColor": "#D7A0C9",
-      "format": "{formatted}"
-    },
-    {
-      "type": "datetime",
-      "key": "└─ DATE",
-      "keyColor": "#D7A0C9",
-      "format": "{year}-{month-pretty}-{day-pretty} {hour-pretty}:{minute-pretty}:{second-pretty}"
-    },
-    {
-      "type": "custom",
-      "format": "{##525A6B}└──────────────────────────────────────────┘{#}"
-    },
-    "break",
-    {
-      "type": "colors",
-      "symbol": "circle",
-      "paddingLeft": 1
+      "format": "{##4A1D2B}╰────────────────────────────────────╯{#}"
     }
   ]
 }
-
