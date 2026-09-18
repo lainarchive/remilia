@@ -41,7 +41,7 @@ bars:
       left:
         [
           "win_button",
-          "touhou_icons",
+          "remilia_ornaments",
           "glazewm_workspaces",
           "glazewm_tiling_direction",
           "lines",
@@ -110,28 +110,20 @@ widgets:
 
 
   # =========================
-  # TOUHOU CHARACTER RAIL
+  # REMILIA ORNAMENT RAIL
   # =========================
 
-  touhou_icons:
+  remilia_ornaments:
     type: "yasb.applications.ApplicationsWidget"
     options:
       label: "{data}"
-      class_name: "touhou-widget"
-      image_icon_size: 24
+      class_name: "remilia-ornaments"
+      image_icon_size: 18
       tooltip: true
       app_list:
-        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\bar_reimu.png", launch: "cmd.exe /c exit", name: "Reimu Hakurei" }
-        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\bar_marisa.png", launch: "cmd.exe /c exit", name: "Marisa Kirisame" }
-        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\bar_cirno.png", launch: "cmd.exe /c exit", name: "Cirno" }
-        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\bar_sakuya.png", launch: "cmd.exe /c exit", name: "Sakuya Izayoi" }
-        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\bar_remilia.png", launch: "cmd.exe /c exit", name: "Remilia Scarlet" }
-        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\bar_flandre.png", launch: "cmd.exe /c exit", name: "Flandre Scarlet" }
-        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\bar_meiling.png", launch: "cmd.exe /c exit", name: "Hong Meiling" }
-        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\bar_patchouli.png", launch: "cmd.exe /c exit", name: "Patchouli Knowledge" }
-        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\bar_koakuma.png", launch: "cmd.exe /c exit", name: "Koakuma" }
-        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\touhou\\bar_daiyousei.png", launch: "cmd.exe /c exit", name: "Daiyousei" }
-
+        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\ornaments\\bat.svg", launch: "cmd.exe /c exit", name: "Bat Crest" }
+        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\ornaments\\rose.svg", launch: "cmd.exe /c exit", name: "Heraldic Rose" }
+        - { icon: "C:\\Users\\User\\remilia\\assets\\yasb\\ornaments\\fleur.svg", launch: "cmd.exe /c exit", name: "Gothic Fleur" }
 
 
   # =========================
