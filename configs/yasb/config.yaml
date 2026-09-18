@@ -41,9 +41,11 @@ bars:
       left:
         [
           "win_button",
+          "touhou_icons",
           "glazewm_workspaces",
           "glazewm_tiling_direction",
           "lines",
+          "active_window",
           "clock",
         ]
 
@@ -57,6 +59,11 @@ bars:
           "media",
           "cava",
           "volume",
+          "lines",
+          "cpu",
+          "memory",
+          "traffic",
+          "wifi",
           "lines",
           "systray",
           "wallpapers",
@@ -100,6 +107,23 @@ widgets:
         system: "System Settings"
         about: "About This PC"
         task_manager: "Task Manager"
+
+
+  # =========================
+  # TOUHOU SIGIL RAIL
+  # =========================
+
+  touhou_icons:
+    type: "yasb.custom.CustomWidget"
+    options:
+      label: "<span class="reimu">☯</span><span class="marisa">✦</span><span class="cirno">⑨</span><span class="sakuya">◇</span><span class="remilia">♛</span>"
+      label_alt: "REIMU  MARISA  CIRNO  SAKUYA  REMILIA"
+      class_name: "touhou-widget"
+
+      callbacks:
+        on_left: "toggle_label"
+        on_middle: "do_nothing"
+        on_right: "toggle_label"
 
 
   # =========================
@@ -224,14 +248,99 @@ widgets:
   active_window:
     type: "yasb.active_window.ActiveWindowWidget"
     options:
-      label: "{win[title]}"
-      label_alt: "[class_name='{win[class_name]}' exe='{win[process][name]}' hwnd={win[hwnd]}]"
-      label_no_window: ""
+      label: "<span>❖</span> {win[title]}"
+      label_alt: "{win[process][name]}"
+      label_no_window: "DESKTOP"
       label_icon: false
       label_icon_size: 14
-      max_length: 100
+      max_length: 36
       max_length_ellipsis: "..."
       monitor_exclusive: false
+
+
+  clock:
+    type: "yasb.clock.ClockWidget"
+    options:
+      label: "{%a} · {%d %b} · {%H:%M}"
+      label_alt: "{%A, %d %B %Y %H:%M}"
+      tooltip: false
+      timezones: []
+
+      calendar:
+        alignment: "center"
+        direction: "down"
+        blur: false
+        round_corners: true
+        round_corners_type: "normal"
+
+
+  cpu:
+    type: "yasb.cpu.CpuWidget"
+    options:
+      label: "<span></span> {info[percent][total]}%"
+      label_alt: "{info[freq][current]} MHz"
+      class_name: "system-stat-widget"
+      update_interval: 2000
+      hide_decimal: true
+      callbacks:
+        on_left: "toggle_label"
+        on_middle: "do_nothing"
+        on_right: "toggle_menu"
+      menu:
+        enabled: true
+        show_graph: true
+        show_graph_grid: false
+        graph_history_size: 45
+
+
+  memory:
+    type: "yasb.memory.MemoryWidget"
+    options:
+      label: "<span>󰍛</span> {virtual_mem_percent}%"
+      label_alt: "RAM {virtual_mem_percent}% · SWAP {swap_mem_percent}%"
+      class_name: "system-stat-widget"
+      update_interval: 5000
+      hide_decimal: true
+      callbacks:
+        on_left: "toggle_label"
+        on_middle: "do_nothing"
+        on_right: "toggle_menu"
+
+
+  traffic:
+    type: "yasb.traffic.TrafficWidget"
+    options:
+      label: "<span>⇣</span> {download_speed} <span>⇡</span> {upload_speed}"
+      label_alt: "↓ {download_speed} · ↑ {upload_speed}"
+      class_name: "network-widget"
+      update_interval: 1000
+      speed_unit: "bytes"
+      hide_if_offline: true
+      hide_decimal: true
+      callbacks:
+        on_left: "toggle_label"
+        on_middle: "do_nothing"
+        on_right: "toggle_menu"
+
+
+  wifi:
+    type: "yasb.wifi.WifiWidget"
+    options:
+      label: "{wifi_icon}"
+      label_alt: "{wifi_icon} {wifi_name}"
+      class_name: "network-widget"
+      update_interval: 5000
+
+      wifi_icons:
+        - "\udb82\udd2e"
+        - "\udb82\udd1f"
+        - "\udb82\udd22"
+        - "\udb82\udd25"
+        - "\udb82\udd28"
+
+      callbacks:
+        on_middle: "do_nothing"
+        on_right: "exec cmd.exe /c start ms-settings:network"
 
 
   volume:
@@ -252,22 +361,6 @@ widgets:
 
       callbacks:
         on_right: "exec cmd.exe /c start ms-settings:sound"
-
-
-  clock:
-    type: "yasb.clock.ClockWidget"
-    options:
-      label: "{%A, %d %B %Y %H:%M}"
-      label_alt: "{%A, %d %B %Y %H:%M}"
-      tooltip: false
-      timezones: []
-
-      calendar:
-        alignment: "center"
-        direction: "down"
-        blur: false
-        round_corners: true
-        round_corners_type: "normal"
 
 
   disk:
@@ -291,7 +384,7 @@ widgets:
       callbacks:
         on_left: "toggle_group"
         on_middle: "toggle_label"
-        on_right: "exec explorer C:\\\"
+        on_right: "exec explorer C:\\\\"
 
 
   wallpapers:
@@ -436,8 +529,8 @@ widgets:
   lines:
     type: "yasb.custom.CustomWidget"
     options:
-      label: "\u007c"
-      label_alt: "\u007c"
+      label: "│"
+      label_alt: "│"
       class_name: "separator-widget"
 
       callbacks:
