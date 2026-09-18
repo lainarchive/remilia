@@ -3,11 +3,15 @@
 :root {
     --bg: #090709;
     --bg2: #151014;
+    --bg3: #1b1117;
     --wine: #6f263f;
     --wine2: #9a3b59;
+    --wine3: #c05a78;
     --text: #e8dedf;
     --muted: #9b898e;
+    --dim: #66545a;
     --border: #351722;
+    --border2: #4a1d2b;
 }
 
 * {
@@ -23,7 +27,7 @@
     padding: 0;
     margin: 0;
     background-color: var(--bg);
-    border: 1px solid var(--border);
+    border: 1px solid var(--border2);
     border-radius: 10px;
 }
 
@@ -39,7 +43,7 @@
 .context-menu .menu-checkbox {
     background-color: var(--bg2);
     padding: 4px 0;
-    border: 1px solid var(--border);
+    border: 1px solid var(--border2);
     border-radius: 8px;
     font-family: "GoMono Nerd Font";
     font-size: 12px;
@@ -66,7 +70,7 @@
 
 .tooltip {
     background-color: var(--bg2);
-    border: 1px solid var(--border);
+    border: 1px solid var(--border2);
     border-radius: 8px;
     padding: 6px;
 }
@@ -94,29 +98,42 @@
     color: var(--text);
 }
 
-.glazewm-tiling-direction { background-color: transparent; height: 1px; }
+.glazewm-tiling-direction {
+    background-color: transparent;
+    height: 1px;
+}
 
 .glazewm-tiling-direction .label {
-    font-size: 12px;
-    color: var(--muted);
+    font-size: 11px;
+    color: var(--dim);
     font-family: "GoMono Nerd Font";
 }
 
-.glazewm-workspaces { background-color: transparent; }
-.glazewm-workspaces .offline-status { color: var(--muted); font-size: 12px; }
+.glazewm-workspaces {
+    background-color: transparent;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.glazewm-workspaces .offline-status {
+    color: var(--muted);
+    font-size: 12px;
+}
 
 .glazewm-workspaces .ws-btn {
-    border: none;
+    border: 0;
     font-family: "GoMono Nerd Font";
     font-size: 12px;
-    padding: 5px 8px;
+    font-weight: 600;
+    padding: 5px 9px;
+    margin: 0 1px;
     background-color: transparent;
-    color: var(--muted);
+    color: var(--dim);
 }
 
 .glazewm-workspaces .ws-btn.populated {
     background-color: transparent;
-    color: var(--text);
+    color: var(--muted);
 }
 
 .glazewm-workspaces .ws-btn.active {
@@ -124,9 +141,21 @@
     color: var(--text);
     border: 1px solid var(--wine2);
     border-radius: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.clock-widget { background-color: transparent; }
+.glazewm-workspaces .ws-btn:hover {
+    background-color: var(--bg3);
+    color: var(--text);
+    border-radius: 6px;
+}
+
+.clock-widget {
+    background-color: transparent;
+    margin-left: 5px;
+    margin-right: 6px;
+}
 
 .clock-widget .label {
     font-size: 12px;
@@ -137,7 +166,11 @@
     margin: 0 2px;
     border-radius: 0;
     background-color: transparent;
-    padding: 0 5px;
+    padding: 0 7px;
+}
+
+.clock-widget .label:hover {
+    color: var(--wine3);
 }
 
 .clock-popup.calendar,
@@ -146,7 +179,7 @@
 .wallpapers-gallery-window,
 .taskbar-preview {
     background-color: var(--bg2);
-    border: 1px solid var(--border);
+    border: 1px solid var(--border2);
     border-radius: 8px;
 }
 
@@ -173,7 +206,10 @@
 .calendar .month-label { font-size: 12px; font-weight: normal; }
 .calendar .date-label { font-size: 88px; font-weight: 900; }
 
-.volume-widget { background-color: transparent; }
+.volume-widget {
+    background-color: transparent;
+    margin-left: 2px;
+}
 
 .volume-widget .icon {
     color: var(--text);
@@ -211,7 +247,11 @@
     border-radius: 6px;
 }
 
-.media-widget { background-color: transparent; }
+.media-widget {
+    background-color: transparent;
+    margin-left: 3px;
+    margin-right: 2px;
+}
 
 .media-widget .label {
     font-family: "GoMono Nerd Font";
@@ -224,7 +264,14 @@
     padding: 0 6px;
 }
 
-.media-widget .btn { color: var(--muted); padding-left: -20px; }
+.media-widget .label:hover {
+    color: var(--wine3);
+}
+
+.media-widget .btn {
+    color: var(--dim);
+    padding-left: -20px;
+}
 
 .media-menu { min-width: 416px; max-width: 416px; }
 
@@ -241,6 +288,7 @@
 }
 
 .media-menu .artist { color: var(--muted); }
+
 .media-menu .source {
     color: var(--bg);
     background-color: var(--text);
@@ -281,9 +329,22 @@
     background-color: #3b2730;
 }
 
-.media-menu .progress-slider::groove { height: 4px; border-radius: 3px; color: var(--wine); }
-.media-menu .progress-slider::groove:hover { height: 6px; border-radius: 3px; }
-.media-menu .progress-slider::sub-page { background: var(--wine2); border-radius: 8px; height: 4px; }
+.media-menu .progress-slider::groove {
+    height: 4px;
+    border-radius: 3px;
+    color: var(--wine);
+}
+
+.media-menu .progress-slider::groove:hover {
+    height: 6px;
+    border-radius: 3px;
+}
+
+.media-menu .progress-slider::sub-page {
+    background: var(--wine2);
+    border-radius: 8px;
+    height: 4px;
+}
 
 .wallpapers-gallery-buttons {
     font-size: 12px;
@@ -296,7 +357,10 @@
     border-radius: 6px;
 }
 
-.wallpapers-gallery-buttons:hover { background-color: var(--wine); color: var(--text); }
+.wallpapers-gallery-buttons:hover {
+    background-color: var(--wine);
+    color: var(--text);
+}
 
 .wallpapers-gallery-image {
     border: 2px solid var(--border);
@@ -304,13 +368,20 @@
     margin-right: 5px;
 }
 
-.wallpapers-gallery-image:hover { border: 2px solid var(--wine2); border-radius: 6px; }
+.wallpapers-gallery-image:hover {
+    border: 2px solid var(--wine2);
+    border-radius: 6px;
+}
 
 .power-menu-widget .label {
     color: var(--muted);
     font-size: 17px;
     padding: 0 8px;
     margin-left: -8px;
+}
+
+.power-menu-widget .label:hover {
+    color: var(--wine3);
 }
 
 .uptime {
@@ -334,25 +405,44 @@
 }
 
 .power-menu-popup .button.hover { background-color: var(--wine); }
-.power-menu-popup .button .label { font-size: 14px; color: var(--text); font-family: "GoMono Nerd Font"; }
+.power-menu-popup .button .label {
+    font-size: 14px;
+    color: var(--text);
+    font-family: "GoMono Nerd Font";
+}
+
 .power-menu-popup .button.hover .label { color: var(--text); }
-.power-menu-popup .button .icon { font-size: 64px; padding-top: 54px; color: var(--text); }
+
+.power-menu-popup .button .icon {
+    font-size: 64px;
+    padding-top: 54px;
+    color: var(--text);
+}
 
 .power-menu-popup .button.cancel .icon,
 .power-menu-popup .button.cancel .label { color: #b66a78; }
 
 .cava-widget {
-    background-color: transparent;
-    margin: 0 4px;
-    padding: 0 6px;
+    background-color: var(--bg3);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin: 0 5px;
+    padding: 0 8px;
 }
 
-.systray { padding-left: 0; }
+.systray {
+    padding-left: 0;
+    margin-left: 2px;
+}
 
 .systray .button {
     background: transparent;
     border-radius: 6px;
     padding: 2px;
+}
+
+.systray .button:hover {
+    background-color: var(--bg3);
 }
 
 .systray .unpinned-visibility-btn {
@@ -364,46 +454,63 @@
     width: 16px;
 }
 
+.taskbar-widget {
+    background-color: transparent;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
 .taskbar-widget .app-container { background-color: transparent; }
 .taskbar-widget .app-container.foreground { background-color: transparent; }
 .taskbar-widget .app-container.running { background-color: transparent; }
 
 .taskbar-widget .app-container .app-title {
-    color: var(--muted);
+    color: var(--dim);
     font-family: "GoMono Nerd Font";
-    padding: 0 6px;
-    margin: 4px 3px;
+    font-weight: 500;
+    padding: 0 7px;
+    margin: 4px 2px;
     border: 0;
     background-color: transparent;
     border-radius: 4px;
 }
 
 .taskbar-widget .app-container.running .app-title {
-    color: var(--text);
+    color: var(--muted);
     font-family: "GoMono Nerd Font";
-    padding: 0 6px;
-    margin: 4px 3px;
+    font-weight: 600;
+    padding: 0 7px;
+    margin: 4px 2px;
     border: 0;
     background-color: transparent;
     border-bottom: 1px solid var(--wine);
     border-radius: 0;
 }
 
+.taskbar-widget .app-container.foreground .app-title {
+    color: var(--text);
+    border-bottom: 1px solid var(--wine2);
+}
+
 .taskbar-widget .app-container.foreground .app-title:hover,
 .taskbar-widget .app-container.running .app-title:hover {
     color: var(--text);
-    background-color: #24151c;
+    background-color: var(--bg3);
     border-radius: 4px;
 }
 
 .taskbar-widget .app-container.flashing .app-title {
     background-color: var(--wine);
     color: var(--text);
-    margin: 4px 3px;
+    margin: 4px 2px;
     border-radius: 4px;
 }
 
-.taskbar-preview .header { padding-bottom: 12px; padding-top: 4px; }
+.taskbar-preview .header {
+    padding-bottom: 12px;
+    padding-top: 4px;
+}
+
 .taskbar-preview .header .title {
     color: var(--text);
     font-family: "GoMono Nerd Font";
@@ -415,9 +522,19 @@
     color: var(--wine2);
     margin-left: -8px;
     margin-top: 0;
+    font-size: 11px;
 }
 
 .custom-widget .widget-container .label {
     padding: 0 8px;
     margin-right: -10px;
+}
+
+.system-widget .label {
+    color: var(--wine2);
+    font-size: 15px;
+}
+
+.system-widget .label:hover {
+    color: var(--wine3);
 }
