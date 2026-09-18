@@ -391,7 +391,7 @@ widgets:
     type: "yasb.wallpapers.WallpapersWidget"
     options:
       label: "✦"
-      image_path: "C:\\Users\\MrDLi\\iCloudDrive\\Wallpapers\\Themes\\YLIA"
+      image_path: "C:\\Users\\User\\remilia\\assets\\wallpapers"
       change_automatically: false
       update_interval: 60
 
