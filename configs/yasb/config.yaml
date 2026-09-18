@@ -116,9 +116,9 @@ widgets:
   touhou_icons:
     type: "yasb.applications.ApplicationsWidget"
     options:
-      label: "{data}"
+      label: ""
       class_name: "touhou-widget"
-      image_icon_size: 18
+      image_icon_size: 17
       tooltip: true
 
       app_list:
@@ -201,8 +201,8 @@ widgets:
   media:
     type: "yasb.media.MediaWidget"
     options:
-      label: "{artist} - {title}"
-      label_alt: "{artist}"
+      label: "♫ {title}"
+      label_alt: "{artist}  ·  {title}"
 
       callbacks:
         on_left: "toggle_media_menu"
@@ -210,8 +210,8 @@ widgets:
         on_right: "toggle_label"
 
       max_field_size:
-        label: 45
-        label_alt: 45
+        label: 24
+        label_alt: 32
 
       show_thumbnail: false
       controls_only: false
@@ -251,12 +251,12 @@ widgets:
   active_window:
     type: "yasb.active_window.ActiveWindowWidget"
     options:
-      label: "<span>❖</span> {win[title]}"
+      label: "{win[title]}"
       label_alt: "{win[process][name]}"
-      label_no_window: "DESKTOP"
+      label_no_window: ""
       label_icon: false
       label_icon_size: 14
-      max_length: 36
+      max_length: 28
       max_length_ellipsis: "..."
       monitor_exclusive: false
 
@@ -264,7 +264,7 @@ widgets:
   clock:
     type: "yasb.clock.ClockWidget"
     options:
-      label: "{%a} · {%d %b} · {%H:%M}"
+      label: "{%d %b}  ·  {%H:%M}"
       label_alt: "{%A, %d %B %Y %H:%M}"
       tooltip: false
       timezones: []
@@ -280,7 +280,7 @@ widgets:
   cpu:
     type: "yasb.cpu.CpuWidget"
     options:
-      label: "<span></span> {info[percent][total]}%"
+      label: "CPU {info[percent][total]}%"
       label_alt: "{info[freq][current]} MHz"
       class_name: "system-stat-widget"
       update_interval: 2000
@@ -299,7 +299,7 @@ widgets:
   memory:
     type: "yasb.memory.MemoryWidget"
     options:
-      label: "<span>󰍛</span> {virtual_mem_percent}%"
+      label: "RAM {virtual_mem_percent}%"
       label_alt: "RAM {virtual_mem_percent}% · SWAP {swap_mem_percent}%"
       class_name: "system-stat-widget"
       update_interval: 5000
@@ -313,7 +313,7 @@ widgets:
   traffic:
     type: "yasb.traffic.TrafficWidget"
     options:
-      label: "<span>⇣</span> {download_speed} <span>⇡</span> {upload_speed}"
+      label: "↓ {download_speed}  ↑ {upload_speed}"
       label_alt: "↓ {download_speed} · ↑ {upload_speed}"
       class_name: "network-widget"
       update_interval: 1000
@@ -393,7 +393,7 @@ widgets:
   wallpapers:
     type: "yasb.wallpapers.WallpapersWidget"
     options:
-      label: "<span>\udb83\ude09</span>"
+      label: "✦"
       image_path: "C:\\Users\\MrDLi\\iCloudDrive\\Wallpapers\\Themes\\YLIA"
       change_automatically: false
       update_interval: 60
