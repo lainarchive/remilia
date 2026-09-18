@@ -98,6 +98,35 @@
     color: var(--text);
 }
 
+/* Touhou character-sigil rail */
+.touhou-widget {
+    margin-left: 2px;
+    margin-right: 5px;
+    background-color: transparent;
+}
+
+.touhou-widget .label {
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 0 4px;
+    color: var(--dim);
+}
+
+.touhou-widget .label:hover {
+    background-color: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.touhou-widget .reimu { color: #c05a78; }
+.touhou-widget .marisa { color: #e8dedf; }
+.touhou-widget .cirno { color: #9a3b59; }
+.touhou-widget .sakuya { color: #b6a0aa; }
+.touhou-widget .remilia { color: #c05a78; }
+
 .glazewm-tiling-direction {
     background-color: transparent;
     height: 1px;
@@ -151,6 +180,24 @@
     border-radius: 6px;
 }
 
+.active-window-widget {
+    background-color: transparent;
+    margin-left: 4px;
+    margin-right: 5px;
+}
+
+.active-window-widget .label {
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 500;
+    padding: 0 4px;
+    max-width: 340px;
+}
+
+.active-window-widget .label:hover {
+    color: var(--text);
+}
+
 .clock-widget {
     background-color: transparent;
     margin-left: 5px;
@@ -177,7 +224,10 @@
 .audio-menu,
 .media-menu,
 .wallpapers-gallery-window,
-.taskbar-preview {
+.taskbar-preview,
+.cpu-popup,
+.memory-popup,
+.traffic-menu {
     background-color: var(--bg2);
     border: 1px solid var(--border2);
     border-radius: 8px;
@@ -205,6 +255,53 @@
 .calendar .day-label { margin-top: 20px; font-size: 12px; }
 .calendar .month-label { font-size: 12px; font-weight: normal; }
 .calendar .date-label { font-size: 88px; font-weight: 900; }
+
+.system-stat-widget,
+.network-widget {
+    background-color: transparent;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.system-stat-widget .label,
+.network-widget .label {
+    color: var(--muted);
+    font-size: 11px;
+    padding: 0 4px;
+}
+
+.system-stat-widget .label:hover,
+.network-widget .label:hover {
+    color: var(--text);
+}
+
+.cpu-widget .label,
+.memory-widget .label,
+.traffic-widget .label {
+    font-weight: 600;
+}
+
+.cpu-widget .label.status-high,
+.cpu-widget .label.status-critical,
+.memory-widget .label.status-high,
+.memory-widget .label.status-critical {
+    color: var(--wine3);
+}
+
+.cpu-widget .label.status-medium,
+.memory-widget .label.status-medium {
+    color: #c39aa8;
+}
+
+.wifi-widget .label {
+    color: var(--muted);
+    font-size: 14px;
+    padding: 0 4px;
+}
+
+.wifi-widget .label:hover {
+    color: var(--wine3);
+}
 
 .volume-widget {
     background-color: transparent;
