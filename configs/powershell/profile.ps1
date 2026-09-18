@@ -8,7 +8,6 @@ $OhMyPoshTheme = Join-Path $RemiliaRoot 'configs\oh-my-posh\remilia.omp.json'
 # Fastfetch
 if ((Get-Command fastfetch -ErrorAction SilentlyContinue) -and
     (Test-Path -LiteralPath $FastfetchConfig)) {
-    $env:FASTFETCH_REPO_ROOT = Join-Path $RemiliaRoot 'configs\fastfetch'
     fastfetch --config $FastfetchConfig
 }
 
