@@ -1,6 +1,8 @@
-# Create compact Touhou icons from the downloaded 256x1536 sprite sheets.
-# The pack stores six 256x256 frames vertically. We use the first frame,
-# crop its non-transparent bounds, and fit it into a 24x24 transparent PNG.
+# Build clean 28x28 YASB icons from the Touhou sprite sheets in:
+# assets\\yasb\\touhou
+#
+# Each source is a 256x1536 vertical sheet containing six 256x256 frames.
+# The script evaluates every frame instead of assuming frame 1 is usable.
 
 Add-Type -AssemblyName System.Drawing
 
@@ -12,6 +14,101 @@ $map = [ordered]@{
     "qln.png"  = "bar_cirno.png"
     "xy.png"   = "bar_sakuya.png"
     "lmly.png" = "bar_remilia.png"
+    "fldl.png" = "bar_flandre.png"
+    "hml.png"  = "bar_meiling.png"
+    "pql.png"  = "bar_patchouli.png"
+    "xem.png"  = "bar_koakuma.png"
+    "dyj.png"  = "bar_daiyousei.png"
+}
+
+function Get-FrameBounds {
+    param(
+        [System.Drawing.Bitmap]$Bitmap,
+        [int]$Y
+    )
+
+    # Sample several corners to determine whether the sheet uses
+    # transparent or opaque background.
+    $samples = @(
+        $Bitmap.GetPixel(0, $Y)
+        $Bitmap.GetPixel(255, $Y)
+        $Bitmap.GetPixel(0, [Math]::Min($Y + 255, $Bitmap.Height - 1))
+        $Bitmap.GetPixel(255, [Math]::Min($Y + 255, $Bitmap.Height - 1))
+    )
+
+    $transparentBackground = (($samples | Where-Object { $_.A -le 10 }).Count -ge 2)
+
+    $minX = 255
+    $minY = 255
+    $maxX = 0
+    $maxY = 0
+    $count = 0
+
+    $bgR = 0
+    $bgG = 0
+    $bgB = 0
+
+    if (-not $transparentBackground) {
+        $bgR = [int](($samples | Measure-Object -Property R -Average).Average)
+        $bgG = [int](($samples | Measure-Object -Property G -Average).Average)
+        $bgB = [int](($samples | Measure-Object -Property B -Average).Average)
+    }
+
+    for ($py = 0; $py -lt 256; $py++) {
+        $actualY = $Y + $py
+
+        for ($px = 0; $px -lt 256; $px++) {
+            $c = $Bitmap.GetPixel($px, $actualY)
+
+            $content = $false
+
+            if ($transparentBackground) {
+                $content = $c.A -gt 12
+            }
+            else {
+                $dr = [math]::Abs([int]$c.R - $bgR)
+                $dg = [math]::Abs([int]$c.G - $bgG)
+                $db = [math]::Abs([int]$c.B - $bgB)
+
+                # Ignore tiny compression/color noise.
+                $content = (($dr + $dg + $db) -ge 28)
+            }
+
+            if ($content) {
+                $count++
+
+                if ($px -lt $minX) { $minX = $px }
+                if ($py -lt $minY) { $minY = $py }
+                if ($px -gt $maxX) { $maxX = $px }
+                if ($py -gt $maxY) { $maxY = $py }
+            }
+        }
+    }
+
+    if ($count -eq 0) {
+        return [pscustomobject]@{
+            HasContent = $false
+            Count = 0
+            Area = 0
+            X = 0
+            Y = $Y
+            Width = 0
+            Height = 0
+        }
+    }
+
+    $w = $maxX - $minX + 1
+    $h = $maxY - $minY + 1
+
+    [pscustomobject]@{
+        HasContent = $true
+        Count = $count
+        Area = $w * $h
+        X = $minX
+        Y = $Y + $minY
+        Width = $w
+        Height = $h
+    }
 }
 
 foreach ($pair in $map.GetEnumerator()) {
@@ -25,20 +122,60 @@ foreach ($pair in $map.GetEnumerator()) {
     $src = [System.Drawing.Bitmap]::new($sourcePath)
 
     try {
-        if ($src.Width -ne 256 -or $src.Height -lt 256) {
-            throw "$($pair.Key) is $($src.Width)x$($src.Height), expected a 256px-wide sprite sheet."
+        if ($src.Width -ne 256 -or $src.Height -lt 1536) {
+            throw "$($pair.Key) is $($src.Width)x$($src.Height), expected 256x1536."
         }
 
-        # First 256x256 frame.
-        $frame = [System.Drawing.Bitmap]::new(256, 256, [System.Drawing.Imaging.PixelFormat]::Format32bppArgb)
+        $frames = @()
+
+        for ($frameIndex = 0; $frameIndex -lt 6; $frameIndex++) {
+            $frameY = $frameIndex * 256
+            $bounds = Get-FrameBounds -Bitmap $src -Y $frameY
+
+            if ($bounds.HasContent) {
+                # Favor frames with a substantial silhouette.
+                $score = [math]::Sqrt($bounds.Area) * [math]::Log([math]::Max(2, $bounds.Count), 2)
+                $bounds | Add-Member -NotePropertyName Score -NotePropertyValue $score
+                $bounds | Add-Member -NotePropertyName Frame -NotePropertyValue $frameIndex
+                $frames += $bounds
+            }
+        }
+
+        if ($frames.Count -eq 0) {
+            throw "No visible character content detected in $($pair.Key)."
+        }
+
+        $best = $frames | Sort-Object Score -Descending | Select-Object -First 1
+
+        $pad = 8
+        $cropX = [math]::Max(0, $best.X - $pad)
+        $cropY = [math]::Max(0, $best.Y - $pad)
+        $cropRight = [math]::Min($src.Width - 1, $best.X + $best.Width - 1 + $pad)
+        $cropBottom = [math]::Min($src.Height - 1, $best.Y + $best.Height - 1 + $pad)
+        $cropW = $cropRight - $cropX + 1
+        $cropH = $cropBottom - $cropY + 1
+
+        $out = [System.Drawing.Bitmap]::new(28, 28, [System.Drawing.Imaging.PixelFormat]::Format32bppArgb)
+
         try {
-            $g = [System.Drawing.Graphics]::FromImage($frame)
+            $g = [System.Drawing.Graphics]::FromImage($out)
             try {
                 $g.Clear([System.Drawing.Color]::Transparent)
+                $g.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::NearestNeighbor
+                $g.PixelOffsetMode = [System.Drawing.Drawing2D.PixelOffsetMode]::Half
+                $g.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::None
+                $g.CompositingMode = [System.Drawing.Drawing2D.CompositingMode]::SourceCopy
+
+                $scale = [math]::Min(24.0 / $cropW, 24.0 / $cropH)
+                $drawW = [math]::Max(1, [int][math]::Round($cropW * $scale))
+                $drawH = [math]::Max(1, [int][math]::Round($cropH * $scale))
+                $drawX = [int][math]::Floor((28 - $drawW) / 2)
+                $drawY = [int][math]::Floor((28 - $drawH) / 2)
+
                 $g.DrawImage(
                     $src,
-                    [System.Drawing.Rectangle]::new(0, 0, 256, 256),
-                    [System.Drawing.Rectangle]::new(0, 0, 256, 256),
+                    [System.Drawing.Rectangle]::new($drawX, $drawY, $drawW, $drawH),
+                    [System.Drawing.Rectangle]::new($cropX, $cropY, $cropW, $cropH),
                     [System.Drawing.GraphicsUnit]::Pixel
                 )
             }
@@ -46,77 +183,18 @@ foreach ($pair in $map.GetEnumerator()) {
                 $g.Dispose()
             }
 
-            # Find the non-transparent bounding box.
-            $minX = 255; $minY = 255; $maxX = 0; $maxY = 0; $found = $false
-
-            for ($y = 0; $y -lt 256; $y++) {
-                for ($x = 0; $x -lt 256; $x++) {
-                    $a = $frame.GetPixel($x, $y).A
-                    if ($a -gt 8) {
-                        $found = $true
-                        if ($x -lt $minX) { $minX = $x }
-                        if ($y -lt $minY) { $minY = $y }
-                        if ($x -gt $maxX) { $maxX = $x }
-                        if ($y -gt $maxY) { $maxY = $y }
-                    }
-                }
-            }
-
-            if (-not $found) {
-                throw "The first frame of $($pair.Key) is fully transparent."
-            }
-
-            $pad = 4
-            $minX = [Math]::Max(0, $minX - $pad)
-            $minY = [Math]::Max(0, $minY - $pad)
-            $maxX = [Math]::Min(255, $maxX + $pad)
-            $maxY = [Math]::Min(255, $maxY + $pad)
-
-            $cropW = $maxX - $minX + 1
-            $cropH = $maxY - $minY + 1
-
-            $out = [System.Drawing.Bitmap]::new(28, 28, [System.Drawing.Imaging.PixelFormat]::Format32bppArgb)
-            try {
-                $go = [System.Drawing.Graphics]::FromImage($out)
-                try {
-                    $go.Clear([System.Drawing.Color]::Transparent)
-                    $go.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::NearestNeighbor
-                    $go.PixelOffsetMode = [System.Drawing.Drawing2D.PixelOffsetMode]::Half
-                    $go.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::None
-
-                    $scale = [Math]::Min(24.0 / $cropW, 24.0 / $cropH)
-                    $dw = [Math]::Max(1, [int][Math]::Round($cropW * $scale))
-                    $dh = [Math]::Max(1, [int][Math]::Round($cropH * $scale))
-                    $dx = [int][Math]::Floor((28 - $dw) / 2)
-                    $dy = [int][Math]::Floor((28 - $dh) / 2)
-
-                    $go.DrawImage(
-                        $frame,
-                        [System.Drawing.Rectangle]::new($dx, $dy, $dw, $dh),
-                        [System.Drawing.Rectangle]::new($minX, $minY, $cropW, $cropH),
-                        [System.Drawing.GraphicsUnit]::Pixel
-                    )
-                }
-                finally {
-                    $go.Dispose()
-                }
-
-                $out.Save($outputPath, [System.Drawing.Imaging.ImageFormat]::Png)
-            }
-            finally {
-                $out.Dispose()
-            }
+            $out.Save($outputPath, [System.Drawing.Imaging.ImageFormat]::Png)
         }
         finally {
-            $frame.Dispose()
+            $out.Dispose()
         }
+
+        Write-Host ("{0} -> frame {1} -> {2}x{3}" -f $pair.Key, $best.Frame + 1, $best.Width, $best.Height)
     }
     finally {
         $src.Dispose()
     }
-
-    Write-Host "Created $($pair.Value)"
 }
 
 Write-Host ""
-Write-Host "Touhou bar icons created in $root"
+Write-Host "Created 10 Touhou bar icons."
