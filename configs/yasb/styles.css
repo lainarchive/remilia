@@ -118,44 +118,82 @@
 .glazewm-workspaces {
     background-color: transparent;
     margin-left: 2px;
-    margin-right: 2px;
+    margin-right: 3px;
+    padding: 0 2px;
+}
+
+.glazewm-workspaces .widget-container {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .glazewm-workspaces .offline-status {
     color: var(--muted);
-    font-size: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 0 7px;
 }
 
 .glazewm-workspaces .ws-btn {
-    border: 0;
+    border: 1px solid transparent;
+    border-bottom-color: var(--border);
     font-family: "GoMono Nerd Font";
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
-    padding: 5px 9px;
-    margin: 0 1px;
+    letter-spacing: 0.2px;
+    padding: 4px 9px 5px 9px;
+    margin: 0 2px;
+    min-width: 42px;
     background-color: transparent;
     color: var(--dim);
+    border-radius: 0;
+    transition: all 160ms ease-out;
+}
+
+.glazewm-workspaces .ws-btn.empty {
+    color: var(--dim);
+    border-bottom-color: var(--border);
 }
 
 .glazewm-workspaces .ws-btn.populated {
-    background-color: transparent;
     color: var(--muted);
+    border-bottom-color: var(--border2);
 }
 
-.glazewm-workspaces .ws-btn.active {
-    background-color: var(--wine);
+.glazewm-workspaces .ws-btn.active_empty,
+.glazewm-workspaces .ws-btn.active_populated {
     color: var(--text);
-    border: 1px solid var(--wine2);
-    border-radius: 6px;
+    background-color: var(--bg3);
+    border: 1px solid var(--border2);
+    border-bottom: 2px solid var(--wine2);
+    border-radius: 6px 6px 3px 3px;
     padding-left: 10px;
     padding-right: 10px;
 }
 
-.glazewm-workspaces .ws-btn:hover {
-    background-color: var(--bg3);
+.glazewm-workspaces .ws-btn.focused_empty,
+.glazewm-workspaces .ws-btn.focused_populated {
     color: var(--text);
-    border-radius: 6px;
+    background-color: var(--wine);
+    border-color: var(--wine2);
+    border-bottom-color: var(--wine3);
+    border-radius: 6px 6px 3px 3px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
+
+.glazewm-workspaces .ws-btn:hover,
+.glazewm-workspaces .ws-btn.populated:hover,
+.glazewm-workspaces .ws-btn.empty:hover {
+    color: var(--text);
+    background-color: var(--bg3);
+    border: 1px solid var(--border2);
+    border-bottom: 2px solid var(--wine);
+    border-radius: 6px 6px 3px 3px;
+}
+
 
 .active-window-widget {
     background-color: transparent;
