@@ -3,71 +3,69 @@
         <ResourceDictionary Source="pack://application:,,,/Themes/Base.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <!-- Remilia palette: black cherry, warm ivory, muted rose -->
-    <SolidColorBrush x:Key="RemiliaBg">#09070B</SolidColorBrush>
-    <SolidColorBrush x:Key="RemiliaPanel">#110C13</SolidColorBrush>
-    <SolidColorBrush x:Key="RemiliaPanel2">#160F17</SolidColorBrush>
-    <SolidColorBrush x:Key="RemiliaLine">#2C1823</SolidColorBrush>
-    <SolidColorBrush x:Key="RemiliaLineBright">#5A2738</SolidColorBrush>
-    <SolidColorBrush x:Key="RemiliaRed">#B9364D</SolidColorBrush>
-    <SolidColorBrush x:Key="RemiliaPink">#F05A72</SolidColorBrush>
-    <SolidColorBrush x:Key="RemiliaText">#F4E8EE</SolidColorBrush>
-    <SolidColorBrush x:Key="RemiliaMuted">#9F8592</SolidColorBrush>
+    <!-- Remilia: restrained black, wine, and ivory -->
+    <SolidColorBrush x:Key="RemiliaBg">#08070A</SolidColorBrush>
+    <SolidColorBrush x:Key="RemiliaPanel">#0E0B10</SolidColorBrush>
+    <SolidColorBrush x:Key="RemiliaLine">#241821</SolidColorBrush>
+    <SolidColorBrush x:Key="RemiliaLineBright">#432330</SolidColorBrush>
+    <SolidColorBrush x:Key="RemiliaRed">#A82F45</SolidColorBrush>
+    <SolidColorBrush x:Key="RemiliaPink">#D94C66</SolidColorBrush>
+    <SolidColorBrush x:Key="RemiliaText">#EEE5E9</SolidColorBrush>
+    <SolidColorBrush x:Key="RemiliaMuted">#897781</SolidColorBrush>
 
-    <Thickness x:Key="ResultMargin">9 4 9 4</Thickness>
+    <Thickness x:Key="ResultMargin">10 3 10 3</Thickness>
 
     <Style x:Key="ItemGlyph" TargetType="{x:Type TextBlock}">
-        <Setter Property="Foreground" Value="#F4E8EE" />
-        <Setter Property="FontSize" Value="19" />
-        <Setter Property="Opacity" Value="0.92" />
+        <Setter Property="Foreground" Value="#D9CDD2" />
+        <Setter Property="FontSize" Value="18" />
     </Style>
 
     <Style x:Key="QueryBoxStyle" TargetType="{x:Type TextBox}">
-        <Setter Property="Foreground" Value="#F4E8EE" />
-        <Setter Property="CaretBrush" Value="#F05A72" />
-        <Setter Property="SelectionBrush" Value="#7AB9364D" />
-        <Setter Property="Background" Value="#160F17" />
-        <Setter Property="BorderBrush" Value="#5A2738" />
+        <Setter Property="Foreground" Value="#EEE5E9" />
+        <Setter Property="CaretBrush" Value="#D94C66" />
+        <Setter Property="SelectionBrush" Value="#668F273D" />
+        <Setter Property="Background" Value="#0F0B11" />
+        <Setter Property="BorderBrush" Value="#38202A" />
         <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="Padding" Value="14 2 46 2" />
+        <Setter Property="Padding" Value="16 2 46 2" />
         <Setter Property="FontWeight" Value="SemiBold" />
     </Style>
 
     <Style x:Key="QuerySuggestionBoxStyle" TargetType="{x:Type TextBox}">
-        <Setter Property="Foreground" Value="#8D7480" />
+        <Setter Property="Foreground" Value="#77666F" />
     </Style>
 
     <Style x:Key="WindowBorderStyle" TargetType="{x:Type Border}">
-        <Setter Property="Background" Value="#09070B" />
+        <Setter Property="Background" Value="#08070A" />
         <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="BorderBrush" Value="#4A2130" />
-        <Setter Property="CornerRadius" Value="12" />
+        <Setter Property="BorderBrush" Value="#39202B" />
+        <Setter Property="CornerRadius" Value="10" />
         <Setter Property="Padding" Value="7" />
     </Style>
 
     <Style x:Key="SeparatorStyle" TargetType="{x:Type Rectangle}">
-        <Setter Property="Fill" Value="#321B26" />
+        <Setter Property="Fill" Value="#251720" />
         <Setter Property="Height" Value="1" />
-        <Setter Property="Margin" Value="12 1 12 5" />
+        <Setter Property="Margin" Value="13 2 13 6" />
     </Style>
 
     <Style x:Key="WindowStyle" TargetType="{x:Type Window}">
-        <Setter Property="Background" Value="#09070B" />
+        <Setter Property="Background" Value="#08070A" />
     </Style>
 
     <Style x:Key="PendingLineStyle" TargetType="{x:Type Line}">
-        <Setter Property="Stroke" Value="#B9364D" />
-        <Setter Property="StrokeThickness" Value="2" />
+        <Setter Property="Stroke" Value="#A82F45" />
+        <Setter Property="StrokeThickness" Value="1" />
     </Style>
 
     <Style x:Key="ItemTitleStyle" TargetType="{x:Type TextBlock}">
-        <Setter Property="Foreground" Value="#F4E8EE" />
+        <Setter Property="Foreground" Value="#EDE4E8" />
         <Setter Property="FontWeight" Value="SemiBold" />
     </Style>
 
     <Style x:Key="ItemSubTitleStyle" TargetType="{x:Type TextBlock}">
-        <Setter Property="Foreground" Value="#9F8592" />
-        <Setter Property="Opacity" Value="0.78" />
+        <Setter Property="Foreground" Value="#897781" />
+        <Setter Property="Opacity" Value="0.82" />
     </Style>
 
     <Style x:Key="ItemTitleSelectedStyle" TargetType="{x:Type TextBlock}">
@@ -76,16 +74,17 @@
     </Style>
 
     <Style x:Key="ItemSubTitleSelectedStyle" TargetType="{x:Type TextBlock}">
-        <Setter Property="Foreground" Value="#F3B7C2" />
+        <Setter Property="Foreground" Value="#D9A5B0" />
     </Style>
 
-    <SolidColorBrush x:Key="ItemSelectedBackgroundColor">#9AB9364D</SolidColorBrush>
+    <!-- Keep selection quiet: the accent comes from text and the thin wine tint. -->
+    <SolidColorBrush x:Key="ItemSelectedBackgroundColor">#668F273D</SolidColorBrush>
 
     <Style x:Key="ThumbStyle" TargetType="{x:Type Thumb}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Thumb}">
-                    <Border Background="#F05A72" BorderBrush="Transparent" BorderThickness="0" CornerRadius="2" DockPanel.Dock="Right" />
+                    <Border Background="#D94C66" BorderBrush="Transparent" BorderThickness="0" CornerRadius="2" DockPanel.Dock="Right" />
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -98,60 +97,61 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Thumb}">
-                    <Border Background="#F05A72" BorderBrush="Transparent" BorderThickness="0" CornerRadius="2" />
+                    <Border Background="#D94C66" BorderBrush="Transparent" BorderThickness="0" CornerRadius="2" />
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
 
-    <Geometry x:Key="SearchIconImg">F1 M20,20z M0,0z M14.75,1A5.24,5.24,0,0,0,10,4A5.24,5.24,0,0,0,0,6.25C0,11.75 10,19 10,19 10,19 20,11.75 20,6.25A5.25,5.25,0,0,0,14.75,1z</Geometry>
+    <!-- Actual magnifying-glass icon; the old geometry was a heart. -->
+    <Geometry x:Key="SearchIconImg">M9.5,2A7.5,7.5 0,1 0,14.25,15.25L19,20L20,19L15.25,14.25A7.5,7.5 0,0 0,9.5,2 M9.5,3.5A6,6 0,1 1,3.5,9.5A6,6 0,0 1,9.5,3.5</Geometry>
 
     <Style x:Key="SearchIconPosition" TargetType="{x:Type Canvas}">
-        <Setter Property="Width" Value="34" />
-        <Setter Property="Height" Value="34" />
-        <Setter Property="Margin" Value="0 6 14 0" />
+        <Setter Property="Width" Value="30" />
+        <Setter Property="Height" Value="30" />
+        <Setter Property="Margin" Value="0 7 15 0" />
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="HorizontalAlignment" Value="Right" />
     </Style>
 
     <Style x:Key="SearchIconStyle" TargetType="{x:Type Path}">
-        <Setter Property="Fill" Value="#F05A72" />
-        <Setter Property="Width" Value="28" />
-        <Setter Property="Height" Value="28" />
+        <Setter Property="Fill" Value="#D94C66" />
+        <Setter Property="Width" Value="23" />
+        <Setter Property="Height" Value="23" />
     </Style>
 
     <Style x:Key="ItemHotkeyStyle" TargetType="{x:Type TextBlock}">
-        <Setter Property="Foreground" Value="#D46B7E" />
+        <Setter Property="Foreground" Value="#B96A7B" />
         <Setter Property="FontWeight" Value="SemiBold" />
     </Style>
 
     <Style x:Key="ItemHotkeySelectedStyle" TargetType="{x:Type TextBlock}">
-        <Setter Property="Foreground" Value="#FFD7DE" />
+        <Setter Property="Foreground" Value="#E7BBC4" />
         <Setter Property="FontWeight" Value="SemiBold" />
     </Style>
 
     <Style x:Key="ClockBox" TargetType="{x:Type TextBlock}">
-        <Setter Property="Foreground" Value="#B38F9D" />
+        <Setter Property="Foreground" Value="#9C8790" />
     </Style>
 
     <Style x:Key="DateBox" TargetType="{x:Type TextBlock}">
         <Setter Property="FontWeight" Value="Bold" />
-        <Setter Property="Foreground" Value="#C69AAA" />
+        <Setter Property="Foreground" Value="#B69AA3" />
     </Style>
 
     <Style x:Key="PreviewBorderStyle" TargetType="{x:Type Border}">
-        <Setter Property="BorderBrush" Value="#4A2130" />
+        <Setter Property="BorderBrush" Value="#39202B" />
     </Style>
 
     <Style x:Key="PreviewItemTitleStyle" TargetType="{x:Type TextBlock}">
-        <Setter Property="Foreground" Value="#F4E8EE" />
+        <Setter Property="Foreground" Value="#EDE4E8" />
     </Style>
 
     <Style x:Key="PreviewItemSubTitleStyle" TargetType="{x:Type TextBlock}">
-        <Setter Property="Foreground" Value="#9F8592" />
+        <Setter Property="Foreground" Value="#897781" />
     </Style>
 
     <Style x:Key="PreviewGlyph" TargetType="{x:Type TextBlock}">
-        <Setter Property="Foreground" Value="#F4E8EE" />
+        <Setter Property="Foreground" Value="#D9CDD2" />
     </Style>
 </ResourceDictionary>
