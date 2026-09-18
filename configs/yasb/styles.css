@@ -78,7 +78,7 @@
 /* Touhou character rail */
 .touhou-widget {
     margin-left: 2px;
-    margin-right: 7px;
+    margin-right: 5px;
     background-color: transparent;
 }
 
@@ -89,30 +89,23 @@
     margin: 0;
 }
 
-.touhou-widget .app-button,
-.touhou-widget .button {
+.touhou-widget .label {
     background-color: transparent;
     border: 0;
-    border-radius: 7px;
-    padding: 1px 2px;
-    margin: 0 1px;
+    border-radius: 6px;
+    padding: 0;
+    margin: 0 2px;
+    min-width: 17px;
+    min-height: 17px;
 }
 
-.touhou-widget .app-button:hover,
-.touhou-widget .button:hover {
+.touhou-widget .label:hover {
     background-color: var(--bg3);
     border: 1px solid var(--border2);
 }
 
-.touhou-widget .app-button:pressed,
-.touhou-widget .button:pressed {
+.touhou-widget .label:pressed {
     background-color: var(--wine);
-}
-
-.touhou-widget img,
-.touhou-widget .icon {
-    margin: 0 2px;
-    padding: 0;
 }
 
 .glazewm-tiling-direction {
@@ -179,7 +172,7 @@
     font-size: 11px;
     font-weight: 500;
     padding: 0 4px;
-    max-width: 340px;
+    max-width: 220px;
 }
 
 .active-window-widget .label:hover {
@@ -247,15 +240,15 @@
 .system-stat-widget,
 .network-widget {
     background-color: transparent;
-    margin-left: 1px;
-    margin-right: 1px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .system-stat-widget .label,
 .network-widget .label {
     color: var(--muted);
-    font-size: 11px;
-    padding: 0 4px;
+    font-size: 10px;
+    padding: 0 2px;
 }
 
 .system-stat-widget .label:hover,
@@ -283,8 +276,8 @@
 
 .wifi-widget .label {
     color: var(--muted);
-    font-size: 14px;
-    padding: 0 4px;
+    font-size: 12px;
+    padding: 0 2px;
 }
 
 .wifi-widget .label:hover {
@@ -460,9 +453,9 @@
 
 .power-menu-widget .label {
     color: var(--muted);
-    font-size: 17px;
-    padding: 0 8px;
-    margin-left: -8px;
+    font-size: 15px;
+    padding: 0 4px;
+    margin-left: 0;
 }
 
 .power-menu-widget .label:hover {
@@ -511,8 +504,8 @@
     background-color: var(--bg3);
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
-    margin: 0 5px;
-    padding: 0 8px;
+    margin: 0 3px;
+    padding: 0 5px;
 }
 
 .systray {
@@ -621,5 +614,16 @@
 }
 
 .system-widget .label:hover {
+    color: var(--wine3);
+}
+
+
+.wallpapers-widget .label {
+    color: var(--muted);
+    font-size: 13px;
+    padding: 0 3px;
+}
+
+.wallpapers-widget .label:hover {
     color: var(--wine3);
 }
