@@ -2,8 +2,8 @@
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
 
   "logo": {
-    "type": "raw",
-    "source": "%USERPROFILE%/remilia/configs/fastfetch/manga.six",
+    "type": "sixel",
+    "source": "%USERPROFILE%/remilia/configs/fastfetch/scarlet.jpg",
     "width": 25,
     "height": 19,
     "padding": {
